@@ -21,21 +21,20 @@ const Background = () => {
   const makeid = () => {
     var characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
     var charactersLength = characters.length
-
     return characters.charAt(Math.floor(Math.random() * charactersLength))
   }
   useEffect(() => {
-    setInterval(() => setRandom(makeid()), 250)
-    setInterval(() => setRandom1(makeid()), 200)
-    setInterval(() => setRandom2(makeid()), 230)
-    setInterval(() => setRandom3(makeid()), 300)
-    setInterval(() => setRandom4(makeid()), 270)
-    setInterval(() => setRandom5(makeid()), 300)
-    setInterval(() => setRandom6(makeid()), 250)
-    setInterval(() => setRandom7(makeid()), 200)
-    setInterval(() => (Math.random() < 0.5 ? setX(-20) : setX(+20)), 450)
-    setInterval(() => setY(Math.floor(Math.random() * 150)), 500)
-    setInterval(() => setZ(Math.floor(Math.random() * 150)), 600)
+    setInterval(() => setRandom(makeid()), 500)
+    setInterval(() => setRandom1(makeid()), 400)
+    setInterval(() => setRandom2(makeid()), 460)
+    setInterval(() => setRandom3(makeid()), 600)
+    setInterval(() => setRandom4(makeid()), 540)
+    setInterval(() => setRandom5(makeid()), 600)
+    setInterval(() => setRandom6(makeid()), 500)
+    setInterval(() => setRandom7(makeid()), 400)
+    setInterval(() => (Math.random() < 0.5 ? setX(-8) : setX(+8)), 720)
+    setInterval(() => setY(Math.floor(Math.random() * 150)), 700)
+    setInterval(() => setZ(Math.floor(Math.random() * 150)), 750)
   }, [])
 
   return (
@@ -82,22 +81,22 @@ const down = keyframes`
   }
   to {
     margin-top: 600px;
-    opacity: 0;
+    opacity: 0.1;
   }
 `
 const Styled = styled.div`
   .box {
     background-image: linear-gradient(
       0deg,
-      rgba(255, 255, 255, 0.2) 0%,
-      rgba(74, 142, 234, 0.2) 51%,
-      rgba(206, 227, 255, 0.2) 100%
+      rgba(255, 255, 255, 0.1) 0%,
+      rgba(74, 142, 234, 0.1) 51%,
+      rgba(206, 227, 255, 0.1) 100%
     );
     margin-left: 50px;
     text-align: center;
     width: 20px;
     height: 20px;
-    border: 1px solid #8080805c;
+    /* border: 1px solid #d5d5d566; */
     border-radius: 2px;
   }
   .container {
@@ -108,11 +107,11 @@ const Styled = styled.div`
   h1 {
     font-size: 15px;
     color: white;
-    text-shadow: 2px 2px #fc000041;
+    text-shadow: 2px 2px #8080805c;
   }
   #move {
     position: absolute;
-    animation: ${down} 5s infinite;
+    animation: ${down} 5.5s infinite;
   }
   #moves {
     position: absolute;
@@ -120,7 +119,7 @@ const Styled = styled.div`
   }
   #movef {
     position: absolute;
-    animation: ${down} 4s infinite;
+    animation: ${down} 6.5s infinite;
   }
 `
 
