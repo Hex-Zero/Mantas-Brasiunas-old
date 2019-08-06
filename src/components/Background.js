@@ -15,9 +15,9 @@ const Background = () => {
   const [random7, setRandom7] = useState()
   const randomArray = [random, random1, random2, random3, random4, random5, random6, random7]
 
-  const [y, setY] = useState(67)
-  const [x, setX] = useState(77)
-  const [z, setZ] = useState(79)
+  const [y, setY] = useState(40)
+  const [x, setX] = useState(46)
+  const [z, setZ] = useState(55)
 
   const makeid = () => {
     var characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
@@ -34,8 +34,8 @@ const Background = () => {
     setInterval(() => setRandom6(makeid()), 500)
     setInterval(() => setRandom7(makeid()), 400)
     setInterval(() => (Math.random() < 0.5 ? setX(-8) : setX(+8)), 720)
-    setInterval(() => setY(Math.floor(Math.random() * 150)), 700)
-    setInterval(() => setZ(Math.floor(Math.random() * 150)), 750)
+    setInterval(() => setY(Math.floor(Math.random() * 75)), 700)
+    setInterval(() => setZ(Math.floor(Math.random() * 77)), 750)
   }, [])
 
   return (
@@ -78,12 +78,12 @@ const Background = () => {
 }
 const down = keyframes`
   from {
-    margin-top: 0rem;
+    margin-top: 0em;
     opacity: 0.8;
   }
   to {
-    margin-top: 32rem;
-    opacity: 0;
+    margin-top: 26em;
+    opacity: 0.1;
   }
   
 }
@@ -102,7 +102,7 @@ const Styled = styled.div`
       rgba(74, 142, 234, 0.1) 51%,
       rgba(206, 227, 255, 0.1) 100%
     );
-    margin-left: 77px;
+    margin-left: 4.5rem;
     text-align: center;
     width: 20px;
     height: 20px;
@@ -117,7 +117,8 @@ const Styled = styled.div`
     left: 0;
     top: 0;
     background: whitesmoke;
-    z-index: 10;
+
+    z-index: -10;
   }
   h1 {
     font-size: 15px;
