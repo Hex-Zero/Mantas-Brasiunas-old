@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react"
 import Container from "react-bootstrap/Container"
 import styled, { keyframes } from "styled-components"
 import uuid from "uuid"
+import reach from "../assets/reach.png"
 
 const Background = () => {
   const [random, setRandom] = useState()
@@ -14,9 +15,9 @@ const Background = () => {
   const [random7, setRandom7] = useState()
   const randomArray = [random, random1, random2, random3, random4, random5, random6, random7]
 
-  const [y, setY] = useState(100)
-  const [x, setX] = useState(250)
-  const [z, setZ] = useState(250)
+  const [y, setY] = useState(150)
+  const [x, setX] = useState(360)
+  const [z, setZ] = useState(300)
 
   const makeid = () => {
     var characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
@@ -70,21 +71,27 @@ const Background = () => {
             )
           })}
         </div>
+        <img src={reach} alt="" />
       </Container>
     </Styled>
   )
 }
 const down = keyframes`
   from {
-    margin-top: 20;
+    margin-top: 0%;
     opacity: 0.8;
   }
   to {
-    margin-top: 600px;
+    margin-top: 40%;
     opacity: 0.1;
   }
 `
 const Styled = styled.div`
+  img {
+    bottom: 0;
+    position: absolute;
+    width: 22rem;
+  }
   .box {
     background-image: linear-gradient(
       0deg,
@@ -92,17 +99,22 @@ const Styled = styled.div`
       rgba(74, 142, 234, 0.1) 51%,
       rgba(206, 227, 255, 0.1) 100%
     );
-    margin-left: 50px;
+    margin-left: 77px;
     text-align: center;
     width: 20px;
     height: 20px;
-    /* border: 1px solid #d5d5d566; */
     border-radius: 2px;
   }
   .container {
     display: flexbox;
-    height: 800px;
-    background-color: white;
+
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: whitesmoke;
+    z-index: 10;
   }
   h1 {
     font-size: 15px;
@@ -120,6 +132,9 @@ const Styled = styled.div`
   #movef {
     position: absolute;
     animation: ${down} 6.5s infinite;
+  }
+
+  .overlay {
   }
 `
 
