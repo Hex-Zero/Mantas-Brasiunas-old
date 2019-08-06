@@ -15,9 +15,9 @@ const Background = () => {
   const [random7, setRandom7] = useState()
   const randomArray = [random, random1, random2, random3, random4, random5, random6, random7]
 
-  const [y, setY] = useState(150)
-  const [x, setX] = useState(360)
-  const [z, setZ] = useState(300)
+  const [y, setY] = useState(67)
+  const [x, setX] = useState(77)
+  const [z, setZ] = useState(79)
 
   const makeid = () => {
     var characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
@@ -78,19 +78,22 @@ const Background = () => {
 }
 const down = keyframes`
   from {
-    margin-top: 0%;
+    margin-top: 0rem;
     opacity: 0.8;
   }
   to {
-    margin-top: 40%;
-    opacity: 0.1;
+    margin-top: 32rem;
+    opacity: 0;
   }
+  
+}
 `
 const Styled = styled.div`
   img {
     bottom: 0;
+    left: 3%;
     position: absolute;
-    width: 22rem;
+    height: 40%;
   }
   .box {
     background-image: linear-gradient(
@@ -133,8 +136,10 @@ const Styled = styled.div`
     position: absolute;
     animation: ${down} 6.5s infinite;
   }
-
-  .overlay {
+  @media only screen and (max-width: 767px) {
+    .box {
+      margin-left: 0;
+    }
   }
 `
 
