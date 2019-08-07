@@ -14,7 +14,7 @@ const VideoCards = ({ url, title, content, git, web }) => {
   }
   return (
     <Stlyed>
-      <Video className="card" url={url} onMouseEnter={handleSlideIn}>
+      <Video className="card" url={url} onMouseEnter={handleSlideIn} onClick={handleSlideIn}>
         <Slide onMouseLeave={handleSlideOut} animation={state} className="slide">
           <h1 className="title">{title}</h1>
           <p className="content">{content}</p>
