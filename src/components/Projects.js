@@ -3,6 +3,7 @@ import styled from "styled-components"
 import VideoCards from "./VideoCards"
 import angelOne from "../assets/topcarousel/angelOne.jpg"
 import angelTwo from "../assets/topcarousel/angelTwo.jpg"
+import angelThree from "../assets/topcarousel/angelThree.jpg"
 import blade from "../assets/topcarousel/blade.gif"
 
 const Projects = () => {
@@ -21,6 +22,12 @@ const Projects = () => {
           content={"Red heared angel with Yellow wings"}
         />
         <VideoCards url={blade} title={"Blade and Soul"} content={"Action packed anime series"} />
+
+        <VideoCards
+          url={angelThree}
+          title={"Blade and Soul"}
+          content={"Action packed anime series"}
+        />
       </div>
     </Styled>
   )
@@ -29,7 +36,7 @@ const Projects = () => {
 const Title = styled.h1`
   margin-left: 20%;
   color: #4ec3c9;
-  text-shadow: 1px 1px white;
+  text-shadow: 1px 1px gray;
 `
 
 const Styled = styled.div`
