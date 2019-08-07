@@ -15,12 +15,10 @@ const Background = () => {
   const [random7, setRandom7] = useState()
   const randomArray = [random, random1, random2, random3, random4, random5, random6, random7]
 
-  const [y, setY] = useState(40)
-  const [x, setX] = useState(46)
-  const [z, setZ] = useState(55)
-
+  const [start] = useState([7, 3, 10, 2])
+  const [drops] = useState(["fallFast", "fallMed", "fallSlow", "fallFastest"])
   const makeid = () => {
-    var characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+    var characters = "ABCDEFGHIJKLMNPQRSTUVWXYZ0123456789"
     var charactersLength = characters.length
     return characters.charAt(Math.floor(Math.random() * charactersLength))
   }
@@ -33,114 +31,177 @@ const Background = () => {
     setInterval(() => setRandom5(makeid()), 600)
     setInterval(() => setRandom6(makeid()), 500)
     setInterval(() => setRandom7(makeid()), 400)
-    setInterval(() => (Math.random() < 0.5 ? setX(-8) : setX(+8)), 720)
-    setInterval(() => setY(Math.floor(Math.random() * 75)), 700)
-    setInterval(() => setZ(Math.floor(Math.random() * 77)), 750)
   }, [])
 
   return (
     <Styled>
       <Container>
-        <div style={{ marginLeft: x }} id="move">
-          {randomArray.map(random => {
-            return (
-              <div key={uuid()} className="box">
-                <h1>{random}</h1>
-                <br />
-              </div>
-            )
-          })}
-        </div>
-        <div style={{ marginLeft: y }} id="movef">
-          {randomArray.map(random => {
-            return (
-              <div key={uuid()} className="box">
-                <h1>{random}</h1>
-                <br />
-              </div>
-            )
-          })}
-        </div>
-        <div style={{ marginLeft: z }} id="moves">
-          {randomArray.map(random => {
-            return (
-              <div key={uuid()} className="box">
-                <h1>{random}</h1>
-                <br />
-              </div>
-            )
-          })}
-        </div>
+        {drops.map((drop, index) => (
+          <Move key={drop} className={drop} start={start[index]}>
+            {randomArray.map(random => {
+              return (
+                <div key={uuid()} className="box">
+                  <h1 className="text">{random}</h1>
+                  <br />
+                </div>
+              )
+            })}
+          </Move>
+        ))}
         <img src={reach} alt="" />
       </Container>
     </Styled>
   )
 }
-const down = keyframes`
-  from {
-    margin-top: 0em;
+const Move = styled.div`
+  width: 25px;
+  text-align: center;
+  margin-left: ${props => props.start}vw;
+`
+
+const fallFastest = keyframes`
+  0% {
+    opacity: 0.6;
+  }
+  25%{
     opacity: 0.8;
+    margin-left: 5vw;
   }
-  to {
-    margin-top: 26em;
-    opacity: 0.1;
+  50%{
+    
+    margin-left: 8vw;
   }
-  
+  75%{
+    margin-left: 7.7vw;
+  }
+  100% {
+    margin-left: 7.3vw;
+    margin-top: 25vw;
+    opacity: 0;
+  }
+}
+`
+const fallFast = keyframes`
+  0% {
+    opacity: 0.6;
+  }
+  25%{
+    opacity: 0.8;
+    margin-left: 3vw;
+  }
+  50%{
+    
+    margin-left: 5vw;
+  }
+  75%{
+    margin-left: 4vw;
+  }
+  100% {
+    margin-left: 4.3vw;
+    margin-top: 25vw;
+    opacity: 0;
+  }
+}
+`
+
+const fallMed = keyframes`
+  0% {
+    opacity: 0.6;
+  }
+  25%{
+    opacity: 0.8;
+    margin-left: 7vw;
+  }
+  50%{
+    
+    margin-left: 5vw;
+  }
+  75%{
+    margin-left: 4vw;
+  }
+  100% {
+    margin-left: 4.3vw;
+    margin-top: 25vw;
+    opacity: 0;
+  }
+}
+`
+const fallSlow = keyframes`
+  0% {
+    opacity: 0.6;
+  }
+  25%{
+    opacity: 0.8;
+    margin-left: 3vw;
+  }
+  50%{
+    
+    margin-left: 5vw;
+  }
+  75%{
+    margin-left: 4vw;
+  }
+  100% {
+    margin-left: 4.3vw;
+    margin-top: 25vw;
+    opacity: 0;
+  }
 }
 `
 const Styled = styled.div`
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: #f5f5f500;
+  z-index: -10;
+
   img {
     bottom: 0;
-    left: 3%;
+    left: 1%;
     position: absolute;
-    height: 40%;
+    width: 9vw;
   }
+  .text {
+    font-size: 0.7vw;
+  }
+
   .box {
-    background-image: linear-gradient(
-      0deg,
-      rgba(255, 255, 255, 0.1) 0%,
-      rgba(74, 142, 234, 0.1) 51%,
-      rgba(206, 227, 255, 0.1) 100%
-    );
-    margin-left: 4.5rem;
-    text-align: center;
-    width: 20px;
-    height: 20px;
-    border-radius: 2px;
-  }
-  .container {
-    display: flexbox;
-
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    left: 0;
-    top: 0;
-    background: whitesmoke;
-
-    z-index: -10;
-  }
-  h1 {
-    font-size: 15px;
     color: white;
-    text-shadow: 2px 2px #8080805c;
+    border-radius: 8px;
+    width: 1vw;
+    height: 1vw;
+    background: radial-gradient(
+      ellipse at center,
+      rgba(3, 228, 255, 1) 0%,
+      rgba(226, 238, 255, 1) 70%,
+      rgba(228, 240, 255, 1) 100%
+    );
   }
-  #move {
+  .fallFastest {
+    font-size: 0.4rem;
+    left: 0;
     position: absolute;
-    animation: ${down} 5.5s infinite;
+    animation: ${fallFastest} 4s infinite;
   }
-  #moves {
+  .fallFast {
+    font-size: 0.4rem;
+    left: 0;
     position: absolute;
-    animation: ${down} 6s infinite;
+    animation: ${fallFast} 5s infinite;
   }
-  #movef {
+  .fallMed {
+    font-size: 0.4rem;
+    left: 0;
     position: absolute;
-    animation: ${down} 6.5s infinite;
+    animation: ${fallMed} 6s infinite;
   }
-  @media only screen and (max-width: 767px) {
-    .box {
-      margin-left: 0;
-    }
+  .fallSlow {
+    font-size: 0.4rem;
+    left: 0;
+    position: absolute;
+    animation: ${fallSlow} 7s infinite;
   }
 `
 
