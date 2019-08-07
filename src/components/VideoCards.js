@@ -59,13 +59,12 @@ const Slide = styled.div`
   width: 100%;
   height: 100%;
   position: relative;
-  animation: ${props => props.animation} 2s ease forwards;
+  animation: ${props => props.animation} 1.5s ease forwards;
 `
 
 const Video = styled.div`
   width: 100%;
   height: 100%;
-  position: relative;
   border-radius: 5px;
   background-image: url(${props => props.url});
   background-repeat: no-repeat;
