@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import Background from "./components/Background"
 import Cover from "./components/Cover"
 import Projects from "./components/Projects"
@@ -6,8 +6,13 @@ import Connect from "./components/Connect"
 import styled, { keyframes } from "styled-components"
 
 function App() {
+  const [show, setShow] = useState(false)
+
+  const handleShow = value => {
+    setShow(value)
+  }
   return (
-    <Styled>
+    <Styled onLoad={() => handleShow(showContent)} show={show}>
       <Background />
       <Cover />
       <Projects />
@@ -15,7 +20,7 @@ function App() {
     </Styled>
   )
 }
-const show = keyframes`
+const showContent = keyframes`
 0%{
   opacity: 0;
 }
@@ -26,6 +31,6 @@ const show = keyframes`
 
 const Styled = styled.div`
   opacity: 0;
-  animation: ${show} 600ms forwards;
+  animation: ${props => props.show} 600ms forwards;
 `
 export default App
