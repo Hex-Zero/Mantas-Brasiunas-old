@@ -25,17 +25,17 @@ const ModalIn = keyframes`
     margin-top: 0px
 }
 `
-const ModalOut = keyframes`
-0%{margin-top: -400px}
-100%{
-    margin-top: 0px
-}
-`
+// const ModalOut = keyframes`
+// 0%{margin-top: -400px}
+// 100%{
+//     margin-top: 0px
+// }
+// `
 const StyledModal = styled.div`
   visibility: ${props => (props.visible ? "visible" : "hidden")};
   top: 100px;
   position: fixed;
-  width: 600px;
+  width: 400px;
   height: 300px;
   left: 0;
   right: 0;
@@ -43,9 +43,9 @@ const StyledModal = styled.div`
   margin-right: auto;
   background: white;
   text-align: center;
-  border: solid 1px gray;
+  border: solid 3px #4ec3c9;
   border-radius: 4px;
-  animation: ${props => (props.visible ? ModalIn : false)} 2s linear;
+  animation: ${props => (props.visible ? ModalIn : false)} 750ms linear;
   z-index: 3;
   @media only screen and (max-width: 600px) {
     width: 400px;

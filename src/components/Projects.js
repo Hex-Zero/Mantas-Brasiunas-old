@@ -63,13 +63,15 @@ const Projects = () => {
 }
 
 const Title = styled.h1`
+  left: 0;
+  right: 0;
+  margin: 0 auto;
   margin-top: 10px;
   text-align: center;
   width: 190px;
   border: solid 4px #4ec3c9;
   border-radius: 4px;
-  padding: 5px 10px;
-  margin-left: 20%;
+  padding: 5px 10px 7px 10px;
   color: #4ec3c9;
   text-shadow: 1px 1px gray;
   box-shadow: 2px 2px #555;

@@ -49,7 +49,7 @@ const Coverup = styled.div`
   top: 0;
   background: #f5f5f5a3;
   visibility: ${props => props.cover};
-  animation: ${props => props.coverAnim} 0.5s forwards;
+  animation: ${props => props.coverAnim} 750ms forwards;
   z-index: 2;
 `
 
