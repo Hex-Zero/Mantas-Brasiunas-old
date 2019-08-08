@@ -28,9 +28,8 @@ const showContent = keyframes`
   opacity: 1;
 }
 `
-
 const Styled = styled.div`
   opacity: 0;
-  animation: ${props => props.show} 600ms forwards;
+  animation: ${props => props.show} 1100ms forwards;
 `
 export default App
