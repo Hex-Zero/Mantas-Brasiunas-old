@@ -1,15 +1,56 @@
-import React from "react"
+import React, { useState } from "react"
 import con from "../assets/connect.png"
-import styled from "styled-components"
+import styled, { keyframes } from "styled-components"
 const Connect = () => {
+  const [cover, setVisible] = useState("hidden")
+  const [coverAnim, setCoverAnim] = useState()
+  const handleModal = value => {
+    if (value) {
+      setVisible("visible")
+      setCoverAnim(coverUp)
+    } else {
+      setCoverAnim(coverdown)
+      setTimeout(() => setVisible("hidden"), 500)
+    }
+  }
   return (
     <Styled>
+      <Coverup cover={cover} coverAnim={coverAnim} onClick={() => handleModal(false)} />
       <Status />
-      <Image src={con} alt="" />
+      <Image onClick={() => handleModal(true)} src={con} alt="" />
     </Styled>
   )
 }
+const coverUp = keyframes`
+0%{
+ opacity: 0;
+}
+100%{
+  opacity: 1;
+}
+`
+const coverdown = keyframes`
+0%{
+ opacity: 1;
+}
+100%{
+  opacity: 0;
+}
+`
+const Coverup = styled.div`
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: #f5f5f5aa;
+  visibility: ${props => props.cover};
+  animation: ${props => props.coverAnim} 0.5s forwards;
+  z-index: 2;
+`
+
 const Image = styled.img`
+  cursor: pointer;
   width: 100px;
   position: absolute;
   z-index: 1;
