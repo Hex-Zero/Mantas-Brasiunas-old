@@ -2,7 +2,6 @@ import React, { useState } from "react"
 import slide1 from "../assets/slide.png"
 import { FaGithub, FaGlobe } from "react-icons/fa"
 import styled, { keyframes } from "styled-components"
-
 const VideoCards = ({ url, title, content, git, web }) => {
   const [state, setstate] = useState()
 
@@ -15,6 +14,10 @@ const VideoCards = ({ url, title, content, git, web }) => {
   return (
     <Stlyed>
       <Video className="card" url={url} onMouseEnter={handleSlideIn} onClick={handleSlideIn}>
+        {/* <video autoplay="autoplay" loop="loop">
+          <source src={video} type="video/mp4" />
+        </video> */}
+
         <Slide onMouseLeave={handleSlideOut} animation={state} className="slide">
           <h1 className="title">{title}</h1>
           <p className="content">{content}</p>
@@ -82,7 +85,8 @@ const Stlyed = styled.div`
     border-radius: 5px;
     box-shadow: 3px 5px #555;
   }
-  .video {
+  video {
+    z-index: 1;
   }
   .links {
     position: absolute;

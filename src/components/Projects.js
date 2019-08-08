@@ -1,7 +1,8 @@
 import React from "react"
 import styled from "styled-components"
 import VideoCards from "./VideoCards"
-import angelOne from "../assets/topcarousel/angelOne.jpg"
+import vita from "../assets/vita.gif"
+import ravenouse from "../assets/ravenouse.gif"
 import angelTwo from "../assets/topcarousel/angelTwo.jpg"
 import angelThree from "../assets/topcarousel/angelThree.jpg"
 import blade from "../assets/topcarousel/blade.gif"
@@ -12,12 +13,12 @@ const Projects = () => {
       <Title>My Projects</Title>
       <div className="fbox">
         <VideoCards
-          url={angelOne}
+          url={vita}
           title={"Fancy angel"}
           content={"Red heared angel with Yellow wings"}
         />
         <VideoCards
-          url={angelTwo}
+          url={ravenouse}
           title={"Fancy angel"}
           content={"Red heared angel with Yellow wings"}
         />
