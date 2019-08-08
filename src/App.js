@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import Background from "./components/Background"
 import Cover from "./components/Cover"
 import Projects from "./components/Projects"
@@ -11,8 +11,12 @@ function App() {
   const handleShow = value => {
     setShow(value)
   }
+
+  useEffect(() => {
+    handleShow(showContent)
+  }, [])
   return (
-    <Styled onLoad={() => handleShow(showContent)} show={show}>
+    <Styled  show={show}>
       <Background />
       <Cover />
       <Projects />
