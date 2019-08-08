@@ -52,10 +52,9 @@ const slideout = keyframes`
 const Slide = styled.div`
   color: White;
   margin-left: 100%;
-  text-shadow: 2px 2px red;
+  text-shadow: 1px 1px red;
   background-image: url(${slide1});
-  background-size: 100%;
-  border-radius: 5px;
+  background-size: 100% 101%;
   width: 100%;
   height: 100%;
   position: relative;

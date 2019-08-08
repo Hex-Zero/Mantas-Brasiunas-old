@@ -75,6 +75,9 @@ const Title = styled.h1`
   color: #4ec3c9;
   text-shadow: 1px 1px gray;
   box-shadow: 2px 2px #555;
+  &:hover {
+    background-color: whitesmoke;
+  }
 `
 
 const Styled = styled.div`
@@ -105,6 +108,11 @@ const Styled = styled.div`
     margin-left: 2vw;
     width: 450px;
     height: 250px;
+    border: solid 2px gray;
+    border-radius: 6px;
+    &:hover {
+      border: solid 2px #ff6a00;
+    }
   }
   @media only screen and (max-width: 600px) {
     margin-left: 15%;
