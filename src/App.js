@@ -13,10 +13,10 @@ function App() {
   }
 
   useEffect(() => {
-    handleShow(showContent)
+    setTimeout(handleShow(showContent), 800)
   }, [])
   return (
-    <Styled  show={show}>
+    <Styled show={show}>
       <Background />
       <Cover />
       <Projects />
@@ -34,6 +34,6 @@ const showContent = keyframes`
 `
 const Styled = styled.div`
   opacity: 0;
-  animation: ${props => props.show} 1100ms forwards;
+  animation: ${props => props.show} 600ms forwards;
 `
 export default App
