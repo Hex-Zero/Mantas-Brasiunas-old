@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useContext } from "react"
 import styled, { keyframes } from "styled-components"
-import { ModalContext } from "./ModalContext"
+import { ModalContext } from "../context/ModalContext"
+import { FaTimes } from "react-icons/fa"
 const Modal = () => {
   const [visible, setVisible] = useContext(ModalContext)
   const [coverAnim, setCoverAnim] = useState()
@@ -11,7 +12,7 @@ const Modal = () => {
       setCoverAnim(coverUp)
     } else {
       setCoverAnim(coverdown)
-      setTimeout(() => setCover(false), 750)
+      setTimeout(() => setCover(false), 450)
     }
   }, [visible])
   return (
@@ -19,15 +20,15 @@ const Modal = () => {
       <Coverup cover={cover} coverAnim={coverAnim} onClick={() => setVisible(false)} />
       <StyledModal visible={visible}>
         <p>
-          Online <button onClick={() => setVisible(false)}>x</button>
+          Online
+          <FaTimes className="close" onClick={() => setVisible(false)} />
         </p>
-        <hr />
+        <br />
         <p>Contact</p>
       </StyledModal>
     </Styled>
   )
 }
-
 const ModalIn = keyframes`
 0%{margin-top: -400px}
 100%{margin-top: 0px}
@@ -71,7 +72,20 @@ const StyledModal = styled.div`
     width: 400px;
   }
 `
-
-const Styled = styled.div``
-
+const Styled = styled.div`
+  .close {
+    position: absolute;
+    right: 3px;
+    top: 3px;
+    color: #f86e00;
+    border: solid 2px #f86e00;
+    padding: 2px;
+    border-radius: 100%;
+    cursor: pointer;
+    &:hover {
+      color: gray;
+      border: solid 2px gray;
+    }
+  }
+`
 export default Modal

@@ -2,13 +2,10 @@ import React, { useContext } from "react"
 import con from "../assets/connect.png"
 import styled from "styled-components"
 import Modal from "./Modal"
-import { ModalContext } from "./ModalContext"
+import { ModalContext } from "../context/ModalContext"
 
 const Connect = () => {
   const [visible, setVisible] = useContext(ModalContext)
-  const showModal = value => {
-    setVisible(value)
-  }
   return (
     <Styled>
       <Modal />
@@ -41,10 +38,8 @@ const Status = styled.div`
   );
   z-index: 0;
 `
-
 const Styled = styled.div`
   @media only screen and (max-width: 600px) {
-    /* right: 90px; */
   }
 `
 
