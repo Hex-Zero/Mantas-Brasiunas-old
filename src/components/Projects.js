@@ -15,30 +15,30 @@ const Projects = () => {
         <VideoCards
           url={vita}
           title={"Vita Smile Photograpy"}
-          content={"Red heared angel with Yellow wings"}
+          content={"Landing page for a local family run photograpy bussiness"}
           git="https://github.com/Hex-Zero/VitaSmilePhotography"
           web="https://vita-smile-photography.uk/"
         />
         <VideoCards
           url={ravenouse}
           title={"Ravenouse"}
-          content={"Red heared angel with Yellow wings"}
-          git=""
-          web=""
+          content={"Practise reciving JSON data from Yelp API"}
+          git="https://github.com/Hex-Zero/React-Codecademy"
+          web="https://hex-zero.github.io/React-Codecademy/"
         />
         <VideoCards
           url={budget}
           title={"Budget Calculator"}
-          content={"Action packed anime series"}
-          git=""
-          web=""
+          content={"Exploration of React-Hooks in a budget calculator application"}
+          git="https://github.com/Hex-Zero/React-Hook-App"
+          web="https://hex-zero.github.io/React-Hook-App/"
         />
         <VideoCards
           url={first}
           title={"My First Website"}
-          content={"Action packed anime series"}
-          git=""
-          web=""
+          content={"My first steps in JavaScript, Made a classic memory game"}
+          git="https://github.com/Hex-Zero/xFirst"
+          web="https://hex-zero.github.io/xFirst/main.html"
         />
         <About />
       </div>
@@ -75,7 +75,7 @@ const Styled = styled.div`
     border: solid 4px #f86e00;
     border-radius: 4px;
     padding: 5px 10px;
-    color: #f86e00;
+    color: #984401;
 
     box-shadow: 2px 2px #555;
     font-size: 14px;

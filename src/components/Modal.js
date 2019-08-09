@@ -1,19 +1,28 @@
-import React from "react"
+import React, { useState, useEffect, useContext } from "react"
 import styled, { keyframes } from "styled-components"
-const Modal = ({ visible }) => {
+import { ModalContext } from "./ModalContext"
+const Modal = () => {
+  const [visible, setVisible] = useContext(ModalContext)
+  const [coverAnim, setCoverAnim] = useState()
+  const [cover, setCover] = useState()
+  useEffect(() => {
+    if (visible) {
+      setCover(true)
+      setCoverAnim(coverUp)
+    } else {
+      setCoverAnim(coverdown)
+      setTimeout(() => setCover(false), 750)
+    }
+  }, [visible])
   return (
     <Styled>
+      <Coverup cover={cover} coverAnim={coverAnim} onClick={() => setVisible(false)} />
       <StyledModal visible={visible}>
-        <p>Hello</p>
+        <p>
+          Online <button onClick={() => setVisible(false)}>x</button>
+        </p>
         <hr />
-        <p>Hello</p>
-        <hr />
-        <p>Hello</p>
-        <hr />
-        <p>Hello</p>
-        <hr />
-        <p>Hello</p>
-        <hr />
+        <p>Contact</p>
       </StyledModal>
     </Styled>
   )
@@ -21,16 +30,27 @@ const Modal = ({ visible }) => {
 
 const ModalIn = keyframes`
 0%{margin-top: -400px}
-100%{
-    margin-top: 0px
-}
+100%{margin-top: 0px}
 `
-// const ModalOut = keyframes`
-// 0%{margin-top: -400px}
-// 100%{
-//     margin-top: 0px
-// }
-// `
+const coverUp = keyframes`
+0%{opacity: 0;}
+100%{opacity: 1;}
+`
+const coverdown = keyframes`
+0%{opacity: 1;}
+100%{opacity: 0;}
+`
+const Coverup = styled.div`
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  background: #f5f5f5a3;
+  visibility: ${props => (props.cover ? "visible" : "hidden")};
+  animation: ${props => props.coverAnim} 750ms forwards;
+  z-index: 2;
+`
+
 const StyledModal = styled.div`
   visibility: ${props => (props.visible ? "visible" : "hidden")};
   top: 100px;
@@ -43,7 +63,7 @@ const StyledModal = styled.div`
   margin-right: auto;
   background: white;
   text-align: center;
-  border: solid 3px #4ec3c9;
+  border: solid 3px #f86e00;
   border-radius: 4px;
   animation: ${props => (props.visible ? ModalIn : false)} 750ms linear;
   z-index: 3;
@@ -52,13 +72,6 @@ const StyledModal = styled.div`
   }
 `
 
-const Styled = styled.div`
-  /* margin-top: 100px;
-  justify-content: center;
-  width: 100%;
-  display: flex;
-  top: 0;
-  position: fixed; */
-`
+const Styled = styled.div``
 
 export default Modal

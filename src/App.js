@@ -5,6 +5,8 @@ import Connect from "./components/Connect"
 import Cover from "./components/Cover"
 import styled from "styled-components"
 
+import { ModalProvider } from "./components/ModalContext"
+
 function App() {
   // const [show, setShow] = useState(false)
 
@@ -17,10 +19,12 @@ function App() {
   // }, [])
   return (
     <Styled>
-      <Background />
-      <Cover />
-      <Projects />
-      <Connect />
+      <ModalProvider>
+        <Background />
+        <Cover />
+        <Projects />
+        <Connect />
+      </ModalProvider>
     </Styled>
   )
 }

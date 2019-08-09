@@ -28,7 +28,7 @@ const About = () => {
       Tab stops and cursors in custom snippets The syntax for tab stops in custom Emmet snippets
       follows the Textmate snippets syntax. Use , for tab stops and for tab stops with placeholders.
       Previously, | or was used to denote the cursor location in the custom Emmet snippet. This is
-      no longer supported. Use instead. Emmet configuration{" "}
+      no longer supported. Use instead. Emmet configuration
     </p>
   )
 }
