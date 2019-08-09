@@ -2,6 +2,7 @@ import React, { useState, useEffect, useContext } from "react"
 import styled, { keyframes } from "styled-components"
 import { ModalContext } from "../context/ModalContext"
 import { FaTimes } from "react-icons/fa"
+import Contact from "./Contact"
 const Modal = () => {
   const [visible, setVisible] = useContext(ModalContext)
   const [coverAnim, setCoverAnim] = useState()
@@ -24,7 +25,8 @@ const Modal = () => {
           <FaTimes className="close" onClick={() => setVisible(false)} />
         </p>
         <br />
-        <p>Contact</p>
+
+        <Contact />
       </StyledModal>
     </Styled>
   )

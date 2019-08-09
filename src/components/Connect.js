@@ -6,6 +6,7 @@ import { ModalContext } from "../context/ModalContext"
 
 const Connect = () => {
   const [visible, setVisible] = useContext(ModalContext)
+  console.log(visible)
   return (
     <Styled>
       <Modal />
