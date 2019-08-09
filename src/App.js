@@ -1,22 +1,22 @@
-import React, { useState, useEffect } from "react"
+import React from "react"
 import Background from "./components/Background"
-import Cover from "./components/Cover"
 import Projects from "./components/Projects"
 import Connect from "./components/Connect"
-import styled, { keyframes } from "styled-components"
+import Cover from "./components/Cover"
+import styled from "styled-components"
 
 function App() {
-  const [show, setShow] = useState(false)
+  // const [show, setShow] = useState(false)
 
-  const handleShow = value => {
-    setShow(value)
-  }
+  // const handleShow = value => {
+  //   setShow(value)
+  // }
 
-  useEffect(() => {
-    setTimeout(handleShow(showContent), 800)
-  }, [])
+  // useEffect(() => {
+  //   setTimeout(handleShow(showContent), 800)
+  // }, [])
   return (
-    <Styled show={show}>
+    <Styled>
       <Background />
       <Cover />
       <Projects />
@@ -24,16 +24,16 @@ function App() {
     </Styled>
   )
 }
-const showContent = keyframes`
-0%{
-  opacity: 0;
-}
-100%{
-  opacity: 1;
-}
-`
+// const showContent = keyframes`
+// 0%{
+//   opacity: 0;
+// }
+// 100%{
+//   opacity: 1;
+// }
+// `
 const Styled = styled.div`
-  opacity: 0;
-  animation: ${props => props.show} 600ms forwards;
+  /* opacity: 0;
+  animation: ${props => props.show} 600ms forwards; */
 `
 export default App

@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react"
-import Container from "react-bootstrap/Container"
 import styled, { keyframes } from "styled-components"
 import uuid from "uuid"
 import reach from "../assets/reach.png"
@@ -35,21 +34,19 @@ const Background = () => {
 
   return (
     <Styled>
-      <Container>
-        {drops.map((drop, index) => (
-          <Move key={drop} className={drop} start={start[index]}>
-            {randomArray.map(random => {
-              return (
-                <div key={uuid()} className="box">
-                  <h1 className="text">{random}</h1>
-                  <br />
-                </div>
-              )
-            })}
-          </Move>
-        ))}
-        <img src={reach} alt="" />
-      </Container>
+      {drops.map((drop, index) => (
+        <Move key={drop} className={drop} start={start[index]}>
+          {randomArray.map(random => {
+            return (
+              <div key={uuid()} className="box">
+                <h1 className="text">{random}</h1>
+                <br />
+              </div>
+            )
+          })}
+        </Move>
+      ))}
+      <img src={reach} alt="" />
     </Styled>
   )
 }

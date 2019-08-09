@@ -2,10 +2,8 @@ import React from "react"
 import styled from "styled-components"
 import VideoCards from "./VideoCards"
 import vita from "../assets/vita.gif"
-import ravenouse from "../assets/ravenouse.gif"
-import angelTwo from "../assets/topcarousel/angelTwo.jpg"
-import angelThree from "../assets/topcarousel/angelThree.jpg"
-import blade from "../assets/topcarousel/blade.gif"
+import ravenouse from "../assets/ravenouse.jpg"
+import budget from "../assets/budget.jpg"
 
 const Projects = () => {
   return (
@@ -22,13 +20,9 @@ const Projects = () => {
           title={"Fancy angel"}
           content={"Red heared angel with Yellow wings"}
         />
-        <VideoCards url={blade} title={"Blade and Soul"} content={"Action packed anime series"} />
+        <VideoCards url={budget} title={"Blade and Soul"} content={"Action packed anime series"} />
 
-        <VideoCards
-          url={angelThree}
-          title={"Blade and Soul"}
-          content={"Action packed anime series"}
-        />
+        <VideoCards url={budget} title={"Blade and Soul"} content={"Action packed anime series"} />
         <p className="About">
           About Me <br /> Authoring of Custom Snippets in Emmet 2.0 via the snippets.json file
           differs from the old way of doing the same in a few ways: Topic Old Emmet Emmet 2.0
