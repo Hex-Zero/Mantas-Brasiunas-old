@@ -22,6 +22,7 @@ const Image = styled.img`
   cursor: pointer;
   width: 100px;
   z-index: 1;
+  -webkit-tap-highlight-color: transparent;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;

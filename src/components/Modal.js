@@ -82,6 +82,7 @@ const Styled = styled.div`
     padding: 2px;
     border-radius: 100%;
     cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
     -webkit-touch-callout: none;
     -webkit-user-select: none;
     -khtml-user-select: none;
