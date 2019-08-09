@@ -22,6 +22,12 @@ const Image = styled.img`
   cursor: pointer;
   width: 100px;
   z-index: 1;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 `
 const Status = styled.div`
   position: fixed;
