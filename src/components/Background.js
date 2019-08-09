@@ -166,14 +166,14 @@ const Styled = styled.div`
 
   .box {
     color: white;
-    border-radius: 8px;
+    border-radius: 5px;
     width: 1vw;
     height: 1vw;
-    background: radial-gradient(
-      ellipse at center,
-      rgba(3, 228, 255, 1) 0%,
-      rgba(226, 238, 255, 1) 70%,
-      rgba(228, 240, 255, 1) 100%
+    background: linear-gradient(
+      355deg,
+      rgba(255, 255, 255, 0.5) 0%,
+      rgba(255, 165, 0, 0.5) 47%,
+      rgba(255, 255, 255, 0.5) 100%
     );
   }
   .fallFastest {
