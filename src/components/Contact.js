@@ -46,7 +46,7 @@ const Contact = () => {
 			<Title>Contact</Title>
 			<A>
 				<div className='cover' onClick={() => handleCopy('Name')}>
-					<p>Name: Mantas Brasiunas</p>
+					<p>Mantas Brasiunas</p>
 				</div>
 				<Info type='text' value='Mantas Brasiunas' id='Name' />
 				<span className='icons'>
