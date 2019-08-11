@@ -18,7 +18,7 @@ const About = () => {
 				the pride in the work that I do. The feeling that you get when your work is admired
 				by everyone is amazing. Altho an even greater motivation in my eyes is competition.
 				My performance increases exponentially if I have a difficult task or a strong
-				competitor. And in seems like there is always some goal to reach or champion to
+				competitor. And it seems like there is always some goal to reach or champion to
 				catch up to.
 			</Content>
 			<Title>Team Player</Title>
@@ -34,10 +34,10 @@ const About = () => {
 				Every task is just a list of problems and challenges that you need to overcome. The
 				first step is to figure out what every item in that list is. And then my favorite
 				part, resolving the problems one by one. It can get challenging and even seem
-				impossible at times. Altho when you find the solution it is rewarding beyond belief.
-				My ability to solve any problem that I come across in my ventures is astounding
-				everyone. My approach to problems is not only to resolve them, but also to optimize
-				the result. Which to me is one of my greatest strengths
+				impossible at times. Although when you find the solution it is rewarding beyond
+				belief. My ability to solve any problem that I come across in my ventures is
+				astounding everyone. My approach to problems is not only to resolve them, but also
+				to optimize the result. Which to me is one of my greatest strengths
 			</Content>
 			<Title>Joke Of The Day</Title>
 			<Content>
