@@ -23,7 +23,7 @@ const About = () => {
 			</Content>
 			<Title>Team Player</Title>
 			<Content>
-				Working as a part of the team is a privilege, that is not to be taken lightly. Not
+				Working as part of the team is a privilege, that is not to be taken lightly. Not
 				only do you need to keep yourself going, but helping and motivating your teammates
 				is the way to achieve greatness. Cooperation amplifies everyone's abilities when
 				they are on the same page. With my clear communication and confidence any task can
