@@ -24,8 +24,7 @@ const Modal = () => {
 			<Coverup cover={cover} coverAnim={coverAnim} onClick={() => setVisible(false)} />
 			<StyledModal visible={visible}>
 				<p>
-					Online
-					<FaTimes className="close" onClick={() => setVisible(false)} />
+					<FaTimes className='close' onClick={() => setVisible(false)} />
 				</p>
 				<br />
 
@@ -61,8 +60,8 @@ const StyledModal = styled.div`
 	visibility: ${(props) => (props.visible ? 'visible' : 'hidden')};
 	top: 100px;
 	position: fixed;
-	width: 400px;
-	height: 300px;
+	width: 300px;
+	height: 270px;
 	left: 0;
 	right: 0;
 	margin-left: auto;
@@ -74,7 +73,7 @@ const StyledModal = styled.div`
 	animation: ${(props) => (props.visible ? ModalIn : false)} 750ms linear;
 	z-index: 3;
 	@media only screen and (max-width: 600px) {
-		width: 400px;
+		width: 300px;
 	}
 `
 const Styled = styled.div`

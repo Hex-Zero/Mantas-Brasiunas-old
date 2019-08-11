@@ -1,31 +1,69 @@
 import React, { useState } from 'react'
-import { FaPhone, FaLinkedin, FaFacebookSquare, FaTwitter, FaInstagram } from 'react-icons/fa'
-import styled from 'styled-components'
+import {
+	FaPhone,
+	FaLinkedin,
+	FaFacebookSquare,
+	FaTwitter,
+	FaInstagram,
+	FaYoutubeSquare,
+	FaCopy,
+	FaMailBulk
+} from 'react-icons/fa'
+import styled, { keyframes } from 'styled-components'
 import uuid from 'uuid'
 
 const Contact = () => {
-	const [ instaHover, setInstaHover ] = useState()
+	const [ alertShow, setAlertShow ] = useState()
+	const handleCopy = (x) => {
+		var copyText = document.getElementById(x)
+		copyText.select()
+		document.execCommand('copy')
+		setAlertShow(x)
+		setTimeout(() => {
+			setAlertShow(false)
+		}, 2200)
+	}
+
 	const [ Icons ] = useState([
 		<FaFacebookSquare />,
 		<FaInstagram />,
 		<FaTwitter />,
-		<FaLinkedin />
+		<FaLinkedin />,
+		<FaYoutubeSquare />
 	])
 	const [ Id ] = useState([ 'Facebook', 'Instagram', 'Twitter', 'Linkedin', 'YouTube' ])
 	const [ Links ] = useState([
 		'https://www.facebook.com/HexZer0',
-		'https://www.facebook.com/HexZer0',
-		'https://www.facebook.com/HexZer0',
-		'https://www.facebook.com/HexZer0',
-		'https://www.facebook.com/HexZer0'
+		'https://www.instagram.com/hexzer0/',
+		'https://twitter.com/Hex_Zero_',
+		'https://www.linkedin.com/in/mantas-brasiunas/',
+		'https://www.youtube.com/channel/UCp6TdUkQsXaBOMYaBc9DrNQ'
 	])
 
 	return (
 		<div>
+			<Alert alertShow={alertShow}>{alertShow} copied</Alert>
 			<Title>Contact</Title>
-			<A>Email: Hex0@live.com</A>
 			<A>
-				Phone: 07933640414 <FaPhone />
+				<div className='cover' />
+				Name: <Info type='text' value='Mantas Brasiunas' id='Name' />
+				<span className='copy'>
+					<FaCopy onClick={() => handleCopy('Name')} />
+				</span>
+			</A>
+			<A>
+				<div className='cover' />
+				Email: <Info type='text' value='Hex0@live.com' id='Email' />
+				<span className='copy'>
+					<FaMailBulk /> <FaCopy onClick={() => handleCopy('Email')} />
+				</span>
+			</A>
+			<A>
+				<div className='cover' />
+				Phone: <Info type='text' value='07933640414' id='Phone' />
+				<span className='copy'>
+					<FaPhone /> <FaCopy onClick={() => handleCopy('Phone')} />
+				</span>
 			</A>
 			<Title>Social Media</Title>
 			<Social>
@@ -61,6 +99,33 @@ const Contact = () => {
 		</div>
 	)
 }
+const fade = keyframes`
+0%{opacity: 0}
+40%{opacity: 1}
+60%{opacity: 1}
+100%{opacity: 0}
+`
+
+const Alert = styled.div`
+	width: 150px;
+	font-weight: 600;
+	font-size: 20px;
+	position: fixed;
+	background-color: #f86e00;
+	color: white;
+	left: 0;
+	right: 0;
+	border: solid 3px white;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 5px;
+	padding: 5px 10px;
+	z-index: 4;
+	opacity: 0;
+	animation: ${(props) => (props.alertShow ? fade : false)} 2200ms forwards;
+`
+
 const A = styled.a`
 	display: block;
 	position: relative;
@@ -72,10 +137,34 @@ const A = styled.a`
 	border-radius: 6px;
 	cursor: pointer;
 	&:hover {
-		background: black;
+		background: #b35306;
+	}
+	.cover {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: #00000000;
+	}
+	.copy {
+		position: absolute;
+		right: 5px;
+		cursor: pointer;
+		z-index: 3;
 	}
 `
-const Title = styled.h3``
+const Info = styled.input`
+	font-weight: 700;
+	color: white;
+	background: #00000000;
+	border: none;
+	&:focus {
+		outline: none;
+	}
+`
+
+const Title = styled.h3`margin-top: 6px;`
 
 const SocialLinks = styled.a`
 	font-size: 36px;
@@ -108,9 +197,9 @@ const Social = styled.div`
 		}
 	}
 	#YouTube {
-		color: #0077b5;
+		color: #ff1500;
 		&:hover {
-			color: #035a88;
+			color: #bd1303;
 		}
 	}
 `
