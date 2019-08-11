@@ -45,30 +45,42 @@ const Contact = () => {
 			<Alert alertShow={alertShow}>{alertShow} copied</Alert>
 			<Title>Contact</Title>
 			<A>
-				<div className='cover'>
+				<div className='cover' onClick={() => handleCopy('Name')}>
 					<p>Name: Mantas Brasiunas</p>
 				</div>
 				<Info type='text' value='Mantas Brasiunas' id='Name' />
 				<span className='icons'>
-					<FaCopy onClick={() => handleCopy('Name')} />
+					<Copy>
+						<FaCopy onClick={() => handleCopy('Name')} />
+					</Copy>
 				</span>
 			</A>
 			<A>
-				<div className='cover'>
+				<ComsBig href='mailto:Hex0@live.com' className='cover'>
 					<p>Email: Hex0@live.com</p>
-				</div>
+				</ComsBig>
 				Email: <Info type='text' value='Hex0@live.com' id='Email' />
 				<span className='icons'>
-					<FaMailBulk /> <FaCopy onClick={() => handleCopy('Email')} />
+					<Coms href='mailto:Hex0@live.com'>
+						<FaMailBulk />
+					</Coms>
+					<Copy>
+						<FaCopy onClick={() => handleCopy('Email')} />
+					</Copy>
 				</span>
 			</A>
 			<A>
-				<div className='cover'>
+				<ComsBig href='tel:+447933640414' className='cover'>
 					<p>Phone: 07933640414</p>
-				</div>
+				</ComsBig>
 				<Info type='text' value='07933640414' id='Phone' />
 				<span className='icons'>
-					<FaPhone /> <FaCopy onClick={() => handleCopy('Phone')} />
+					<Coms href='tel:+447933640414'>
+						<FaPhone />
+					</Coms>
+					<Copy>
+						<FaCopy onClick={() => handleCopy('Phone')} />
+					</Copy>
 				</span>
 			</A>
 			<Title>Social Media</Title>
@@ -111,7 +123,14 @@ const fade = keyframes`
 60%{opacity: 1}
 100%{opacity: 0}
 `
-
+const Copy = styled.span`
+	&:hover {
+		position: absolute;
+		color: #fbc31b;
+		right: 1px;
+		top: 1px;
+	}
+`
 const Alert = styled.div`
 	width: 150px;
 	font-weight: 600;
@@ -131,7 +150,20 @@ const Alert = styled.div`
 	opacity: 0;
 	animation: ${(props) => (props.alertShow ? fade : false)} 2200ms forwards;
 `
-
+const Coms = styled.a`
+	color: white;
+	position: absolute;
+	right: 20px;
+	&:hover {
+		right: 21px;
+		top: 1px;
+		color: #fbc31b;
+	}
+`
+const ComsBig = styled.a`
+	color: white;
+	text-decoration: none;
+`
 const A = styled.a`
 	display: block;
 	position: relative;
