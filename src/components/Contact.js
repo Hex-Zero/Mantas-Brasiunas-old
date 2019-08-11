@@ -45,23 +45,29 @@ const Contact = () => {
 			<Alert alertShow={alertShow}>{alertShow} copied</Alert>
 			<Title>Contact</Title>
 			<A>
-				<div className='cover' />
-				Name: <Info type='text' value='Mantas Brasiunas' id='Name' />
-				<span className='copy'>
+				<div className='cover'>
+					<p>Name: Mantas Brasiunas</p>
+				</div>
+				<Info type='text' value='Mantas Brasiunas' id='Name' />
+				<span className='icons'>
 					<FaCopy onClick={() => handleCopy('Name')} />
 				</span>
 			</A>
 			<A>
-				<div className='cover' />
+				<div className='cover'>
+					<p>Email: Hex0@live.com</p>
+				</div>
 				Email: <Info type='text' value='Hex0@live.com' id='Email' />
-				<span className='copy'>
+				<span className='icons'>
 					<FaMailBulk /> <FaCopy onClick={() => handleCopy('Email')} />
 				</span>
 			</A>
 			<A>
-				<div className='cover' />
-				Phone: <Info type='text' value='07933640414' id='Phone' />
-				<span className='copy'>
+				<div className='cover'>
+					<p>Phone: 07933640414</p>
+				</div>
+				<Info type='text' value='07933640414' id='Phone' />
+				<span className='icons'>
 					<FaPhone /> <FaCopy onClick={() => handleCopy('Phone')} />
 				</span>
 			</A>
@@ -140,14 +146,24 @@ const A = styled.a`
 		background: #b35306;
 	}
 	.cover {
+		display: flex;
+		font-weight: 600;
 		position: absolute;
 		top: 0;
 		left: 0;
 		width: 100%;
 		height: 100%;
-		background-color: #00000000;
+		align-items: center;
+		border-radius: 2px;
+		background-color: #f86e00;
+		&:hover {
+			background: #b35306;
+		}
+		p {
+			margin-left: 7px;
+		}
 	}
-	.copy {
+	.icons {
 		position: absolute;
 		right: 5px;
 		cursor: pointer;
