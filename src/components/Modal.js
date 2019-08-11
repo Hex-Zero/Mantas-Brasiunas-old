@@ -61,7 +61,7 @@ const StyledModal = styled.div`
 	top: 100px;
 	position: fixed;
 	width: 300px;
-	height: 270px;
+	height: 260px;
 	left: 0;
 	right: 0;
 	margin-left: auto;
