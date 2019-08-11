@@ -37,33 +37,36 @@ const VideoCards = ({ url, title, content, git, web }) => {
 	)
 }
 const slidein = keyframes`
-  0%{
-    margin-left: 100%;
-  }
-  100% {
-    margin-left: 0;
-  }
-  
+  0%{margin-left: 100%;}
+  100% { margin-left: 0;}
 `
 const slideout = keyframes`
-  0%{
-    margin-left: 0;
-  }
-  100% {
-    margin-left: 100%;
-  }
-  
+  0%{margin-left: 0;}
+  100% {margin-left: 100%;}
+`
+const glow = keyframes`
+ 0%{text-shadow: 0 0 2px #ff7c00, 0 0 4px #ff7c00;}
+  100%{text-shadow: 0 0 4px #ff7c00, 0 0 6px #e21102;}
 `
 const Slide = styled.div`
-	color: #f86e00;
+	color: white;
 	margin-left: 100%;
-	text-shadow: 2px 1px black;
 	background-image: url(${slide1});
 	background-size: 100%;
 	width: 100%;
 	height: 100%;
 	position: relative;
 	animation: ${(props) => props.animation} 1.5s ease forwards;
+	.title {
+		margin-left: 10px;
+		animation: ${glow} 1s ease-in-out infinite alternate;
+	}
+	.content {
+		margin-left: 10px;
+		font-size: 18px;
+		font-weight: 600;
+		animation: ${glow} 1s ease-in-out infinite alternate;
+	}
 `
 const Video = styled.div`
 	width: 100%;
