@@ -16,10 +16,10 @@ const About = () => {
 			<Content>
 				Everyone is driven by different motivations in life. One of my main motivations is
 				the pride in the work that I do. The feeling that you get when your work is admired
-				by everyone is amazing. Altho an even greater motivation in my eyes is competition.
-				My performance increases exponentially if I have a difficult task or a strong
-				competitor. And it seems like there is always some goal to reach or champion to
-				catch up to.
+				by everyone is amazing. Although an even greater motivation in my eyes is
+				competition. My performance increases exponentially if I have a difficult task or a
+				strong competitor. And it seems like there is always some goal to reach or champion
+				to catch up to.
 			</Content>
 			<Title>Team Player</Title>
 			<Content>
