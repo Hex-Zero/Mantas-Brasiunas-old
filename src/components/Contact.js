@@ -48,7 +48,7 @@ const Contact = () => {
 				<div className='cover' onClick={() => handleCopy('Name')}>
 					<p>Mantas Brasiunas</p>
 				</div>
-				<Info type='text' value='Mantas Brasiunas' id='Name' />
+				<Info type='text' value='Mantas Brasiunas' id='Name' readOnly />
 				<span className='icons'>
 					<Copy>
 						<FaCopy onClick={() => handleCopy('Name')} />
@@ -59,7 +59,7 @@ const Contact = () => {
 				<ComsBig href='mailto:Hex0@live.com' className='cover'>
 					<p>Email: Hex0@live.com</p>
 				</ComsBig>
-				Email: <Info type='text' value='Hex0@live.com' id='Email' />
+				Email: <Info type='text' value='Hex0@live.com' id='Email' readOnly />
 				<span className='icons'>
 					<Coms href='mailto:Hex0@live.com'>
 						<FaMailBulk />
@@ -73,7 +73,7 @@ const Contact = () => {
 				<ComsBig href='tel:+447933640414' className='cover'>
 					<p>Phone: 07933640414</p>
 				</ComsBig>
-				<Info type='text' value='07933640414' id='Phone' />
+				<Info type='text' value='07933640414' id='Phone' readOnly />
 				<span className='icons'>
 					<Coms href='tel:+447933640414'>
 						<FaPhone />
