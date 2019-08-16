@@ -35,7 +35,7 @@ const Back = styled.div`
 	background: linear-gradient(45deg, rgba(255, 0, 223, 1) 0%, rgba(255, 255, 0, 1) 100%);
 	width: 112px;
 	height: 112px;
-	z-index: 1;
+	z-index: -2;
 	border-radius: 50%;
 	animation: ${glow} 1s ease-in-out infinite alternate;
 `
@@ -43,7 +43,7 @@ const Back = styled.div`
 const Rotating = styled.div`
 	margin-top: 75px;
 	position: absolute;
-	z-index: 1;
+	z-index: -2;
 	display: flex;
 	width: 34%;
 	justify-content: center;
