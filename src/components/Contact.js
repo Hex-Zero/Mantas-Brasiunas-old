@@ -141,6 +141,7 @@ const Info = styled.input`
 	color: white;
 	background: #00000000;
 	border: none;
+	cursor: pointer;
 	&:focus {
 		outline: none;
 	}
