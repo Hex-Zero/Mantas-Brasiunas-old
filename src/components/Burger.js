@@ -11,10 +11,10 @@ const Burger = () => {
 			<Modal />
 			<Styled onClick={() => setVisible(true)}>
 				<div className='imageCircul'>
+					<img className='img' src={face} alt='my face' />
 					<div className='Loading'>
 						<Loading />
 					</div>
-					<img className='img' src={face} alt='my face' />
 					<div className='statusCircul'>
 						<div className='statusLight' />
 					</div>
@@ -49,22 +49,23 @@ const Styled = styled.div`
 		height: 98%;
 		border-radius: 100%;
 		border: solid 1px #780000;
+		z-index: -3;
 		background: linear-gradient(
 			120deg,
 			rgba(128, 0, 0, 1) 0%,
 			rgba(255, 0, 0, 1) 50%,
 			rgba(120, 15, 15, 1) 100%
 		);
-		z-index: -3;
+
 		animation: ${glow} 1s ease-in-out infinite alternate;
 	}
 	.img {
+		position: absolute;
 		margin: 4% 4%;
 		width: 90%;
 		height: 90%;
 		border-radius: 100%;
 		border: solid 1px #780000;
-		background-color: red;
 	}
 	.statusCircul {
 		position: absolute;
