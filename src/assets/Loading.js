@@ -41,6 +41,7 @@ const Rotating = styled.div`
 	margin-top: 4px;
 	margin-left: 4px;
 	position: absolute;
+	z-index: -2;
 
 	div {
 		animation: ${rotate} 1s linear infinite;
