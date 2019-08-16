@@ -26,7 +26,7 @@ const glow = keyframes`
 `
 const Back = styled.div`
 	margin-top: 69px;
-	margin-left: 158px;
+	margin-left: 157px;
 	position: absolute;
 	background: -moz-linear-gradient(45deg, rgba(255, 0, 223, 1) 0%, rgba(255, 255, 0, 1) 100%);
 	background: -webkit-linear-gradient(45deg, rgba(255, 0, 223, 1) 0%, rgba(255, 255, 0, 1) 100%);
