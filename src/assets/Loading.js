@@ -21,32 +21,35 @@ const rotate = keyframes`
     100%{transform:rotate(360deg)}
 `
 const glow = keyframes`
- 0%{box-shadow: 0 0 2px #ff7c00, 0 0 8px #ff7c00;}
-  100%{box-shadow: 0 0 8px #ff7c00, 0 0 12px #e21102;}
+ 0%{box-shadow: 0 0 6px #ff7c00, 0 0 10px #ff7c00;}
+  100%{box-shadow: 0 0 10px #ff7c00, 0 0 16px #e21102;}
 `
 const Back = styled.div`
-	margin-top: 69px;
-	margin-left: 157px;
+	margin-top: 90px;
+	margin-left: 185px;
 	position: absolute;
 	background: -moz-linear-gradient(45deg, rgba(255, 0, 223, 1) 0%, rgba(255, 255, 0, 1) 100%);
 	background: -webkit-linear-gradient(45deg, rgba(255, 0, 223, 1) 0%, rgba(255, 255, 0, 1) 100%);
 	background: -o-linear-gradient(45deg, rgba(255, 0, 223, 1) 0%, rgba(255, 255, 0, 1) 100%);
 	background: -ms-linear-gradient(45deg, rgba(255, 0, 223, 1) 0%, rgba(255, 255, 0, 1) 100%);
 	background: linear-gradient(45deg, rgba(255, 0, 223, 1) 0%, rgba(255, 255, 0, 1) 100%);
-	width: 112px;
-	height: 112px;
+	width: 68px;
+	height: 68px;
 	z-index: -2;
 	border-radius: 50%;
 	animation: ${glow} 1s ease-in-out infinite alternate;
+	@media only screen and (max-width: 600px) {
+		margin-top: 60px;
+		margin-left: 133px;
+	}
 `
 
 const Rotating = styled.div`
-	margin-top: 75px;
+	margin-top: 94px;
+	margin-left: 189px;
 	position: absolute;
 	z-index: -2;
-	display: flex;
-	width: 34%;
-	justify-content: center;
+
 	div {
 		animation: ${rotate} 1s linear infinite;
 		width: 100%;
@@ -54,8 +57,8 @@ const Rotating = styled.div`
 		border-radius: 100%;
 	}
 	.layer-1 {
-		width: 100px;
-		height: 100px;
+		width: 60px;
+		height: 60px;
 	}
 	.layer-1 {
 		background: -moz-linear-gradient(0deg, rgba(255, 72, 0, 1) 0%, rgba(255, 124, 0, 1) 100%);
@@ -146,5 +149,9 @@ const Rotating = styled.div`
 			rgba(255, 115, 0, 1) 79%,
 			rgba(255, 124, 0, 1) 100%
 		);
+	}
+	@media only screen and (max-width: 600px) {
+		margin-top: 64px;
+		margin-left: 137px;
 	}
 `
