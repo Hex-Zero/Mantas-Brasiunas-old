@@ -15,7 +15,9 @@ const VideoCards = ({ url, title, content, git, web }) => {
 				url={url}
 				onMouseEnter={() => handleSlide('slidein')}
 				onMouseLeave={() => handleSlide('slideout')}>
-				<Loading />
+				<div className='center'>
+					<Loading />
+				</div>
 				<div className={state + ' slide'}>
 					{/* <a className='anchorNoStyle' href={web} target='__blank'> */}
 					<Slide git={git} web={web} title={title} content={content} />
@@ -46,6 +48,11 @@ const Stlyed = styled.div`
 	/* .anchorNoStyle {
 		text-decoration: none;
 	} */
+	.center {
+		position: absolute;
+		margin: 90px 194px;
+		z-index: -2;
+	}
 	.card {
 		margin-right: 0;
 		overflow: hidden;
@@ -73,6 +80,9 @@ const Stlyed = styled.div`
 		.links {
 			bottom: 5px;
 			right: 180px;
+		}
+		.center {
+			margin: 64px 133px;
 		}
 	}
 `

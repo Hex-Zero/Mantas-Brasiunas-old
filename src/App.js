@@ -1,9 +1,9 @@
 import React from 'react'
 import Background from './components/Background'
 import Projects from './components/Projects'
-import Connect from './components/Connect'
 import Cover from './components/Cover'
 import { ModalProvider } from './context/ModalContext'
+import Burger from './components/Burger'
 
 function App() {
 	return (
@@ -11,7 +11,7 @@ function App() {
 			<Background />
 			<Cover />
 			<Projects />
-			<Connect />
+			<Burger />
 		</ModalProvider>
 	)
 }
