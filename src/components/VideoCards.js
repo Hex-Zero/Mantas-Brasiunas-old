@@ -14,8 +14,7 @@ const VideoCards = ({ url, title, content, git, web }) => {
 				className='card'
 				url={url}
 				onMouseEnter={() => handleSlide('slidein')}
-				onMouseLeave={() => handleSlide('slideout')}
-				onClick={() => handleSlide(state === 'slidein' ? 'slideout' : 'slidein')}>
+				onMouseLeave={() => handleSlide('slideout')}>
 				<Loading />
 				<div className={state + ' slide'}>
 					<Slide git={git} web={web} title={title} content={content} />
