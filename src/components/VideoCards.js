@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import slide1 from '../assets/slide.png'
 import { FaGithub, FaGlobe } from 'react-icons/fa'
 import styled, { keyframes } from 'styled-components'
+import Loading from '../assets/Loading'
 const VideoCards = ({ url, title, content, git, web }) => {
 	const [ state, setstate ] = useState()
 
@@ -14,6 +15,7 @@ const VideoCards = ({ url, title, content, git, web }) => {
 	return (
 		<Stlyed>
 			<Video className='card' url={url} onMouseEnter={handleSlideIn} onClick={handleSlideIn}>
+				<Loading />
 				<Slide
 					onMouseLeave={handleSlideOut}
 					onClick={handleSlideOut}
@@ -75,6 +77,7 @@ const Video = styled.div`
 	background-image: url(${(props) => props.url});
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
+	z-index: 1;
 `
 const P = styled.p`font-size: 12px;`
 
