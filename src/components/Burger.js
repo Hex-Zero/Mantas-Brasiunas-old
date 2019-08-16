@@ -44,6 +44,7 @@ const Styled = styled.div`
 	}
 
 	.imageCircul {
+		position: absolute;
 		width: 98%;
 		height: 98%;
 		border-radius: 100%;
@@ -54,6 +55,7 @@ const Styled = styled.div`
 			rgba(255, 0, 0, 1) 50%,
 			rgba(120, 15, 15, 1) 100%
 		);
+		z-index: -3;
 		animation: ${glow} 1s ease-in-out infinite alternate;
 	}
 	.img {
