@@ -5,13 +5,12 @@ import Modal from './Modal'
 import { ModalContext } from '../context/ModalContext'
 
 const Connect = () => {
-	const [ visible, setVisible ] = useContext(ModalContext)
-	console.log(visible)
+	const { setVisible } = useContext(ModalContext)
 	return (
 		<Styled>
 			<Modal />
 			<Status />
-			<Image src={con} alt="" onClick={() => setVisible(true)} />
+			<Image src={con} alt='' onClick={() => setVisible(true)} />
 		</Styled>
 	)
 }

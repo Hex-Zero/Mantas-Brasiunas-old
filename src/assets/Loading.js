@@ -3,9 +3,9 @@ import styled, { keyframes } from 'styled-components'
 const Loading = () => {
 	return (
 		<Styled>
-			<div class='layer-1'>
-				<div class='layer-2'>
-					<div class='layer-3' />
+			<div className='layer-1'>
+				<div className='layer-2'>
+					<div className='layer-3' />
 				</div>
 			</div>
 		</Styled>

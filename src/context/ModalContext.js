@@ -5,7 +5,7 @@ export const ModalContext = createContext()
 export const ModalProvider = (props) => {
 	const [ visible, setVisible ] = useState(false)
 	return (
-		<ModalContext.Provider value={[ visible, setVisible ]}>
+		<ModalContext.Provider value={{ visible, setVisible }}>
 			{props.children}
 		</ModalContext.Provider>
 	)

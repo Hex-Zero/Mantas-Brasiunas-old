@@ -1,16 +1,8 @@
 import React, { useState } from 'react'
-import {
-	FaPhone,
-	FaLinkedin,
-	FaFacebookSquare,
-	FaTwitter,
-	FaInstagram,
-	FaYoutubeSquare,
-	FaCopy,
-	FaMailBulk
-} from 'react-icons/fa'
+import { FaPhone, FaCopy, FaMailBulk } from 'react-icons/fa'
 import styled, { keyframes } from 'styled-components'
-import uuid from 'uuid'
+
+import SocialMedia from './SocialMedia'
 
 const Contact = () => {
 	const [ alertShow, setAlertShow ] = useState()
@@ -23,42 +15,19 @@ const Contact = () => {
 			setAlertShow(false)
 		}, 2200)
 	}
-
-	const [ Icons ] = useState([
-		<FaFacebookSquare />,
-		<FaInstagram />,
-		<FaTwitter />,
-		<FaLinkedin />,
-		<FaYoutubeSquare />
-	])
-	const [ Id ] = useState([ 'Facebook', 'Instagram', 'Twitter', 'Linkedin', 'YouTube' ])
-	const [ Links ] = useState([
-		'https://www.facebook.com/HexZer0',
-		'https://www.instagram.com/hexzer0/',
-		'https://twitter.com/Hex_Zero_',
-		'https://www.linkedin.com/in/mantas-brasiunas/',
-		'https://www.youtube.com/channel/UCp6TdUkQsXaBOMYaBc9DrNQ'
-	])
-
 	return (
 		<div>
 			<Alert alertShow={alertShow}>{alertShow} copied</Alert>
 			<Title>Contact</Title>
-			<A>
-				<div className='cover' onClick={() => handleCopy('Name')}>
-					<p>Mantas Brasiunas</p>
-				</div>
-				<Info type='text' value='Mantas Brasiunas' id='Name' readOnly />
+			<A onClick={() => handleCopy('Name')}>
+				Name: <Info type='text' value='Mantas Brasiunas' id='Name' readOnly />
 				<span className='icons'>
 					<Copy>
 						<FaCopy onClick={() => handleCopy('Name')} />
 					</Copy>
 				</span>
 			</A>
-			<A>
-				<ComsBig href='mailto:Hex0@live.com' className='cover'>
-					<p>Email: Hex0@live.com</p>
-				</ComsBig>
+			<A onClick={() => handleCopy('Email')}>
 				Email: <Info type='text' value='Hex0@live.com' id='Email' readOnly />
 				<span className='icons'>
 					<Coms href='mailto:Hex0@live.com'>
@@ -69,11 +38,8 @@ const Contact = () => {
 					</Copy>
 				</span>
 			</A>
-			<A>
-				<ComsBig href='tel:+447933640414' className='cover'>
-					<p>Phone: 07933640414</p>
-				</ComsBig>
-				<Info type='text' value='07933640414' id='Phone' readOnly />
+			<A onClick={() => handleCopy('Phone')}>
+				Phone: <Info type='text' value='07933640414' id='Phone' readOnly />
 				<span className='icons'>
 					<Coms href='tel:+447933640414'>
 						<FaPhone />
@@ -84,36 +50,7 @@ const Contact = () => {
 				</span>
 			</A>
 			<Title>Social Media</Title>
-			<Social>
-				{Icons.map((icon, index) => (
-					<SocialLinks
-						id={Id[index]}
-						key={uuid()}
-						href={Links[index]}
-						target='__blank'
-						rel='noopener noreferrer'>
-						{icon}
-					</SocialLinks>
-				))}
-			</Social>
-			<svg width='0' height='0'>
-				<radialGradient id='rg' r='150%' cx='30%' cy='107%'>
-					<stop stop-color='#fdf497' offset='0' />
-					<stop stop-color='#fdf497' offset='0.05' />
-					<stop stop-color='#fd5949' offset='0.45' />
-					<stop stop-color='#d6249f' offset='0.6' />
-					<stop stop-color='#285AEB' offset='0.9' />
-				</radialGradient>
-			</svg>
-			<svg width='0' height='0'>
-				<radialGradient id='rgi' r='150%' cx='30%' cy='107%'>
-					<stop stop-color='#e1d989' offset='0' />
-					<stop stop-color='#e1d989' offset='0.05' />
-					<stop stop-color='#ce483b' offset='0.45' />
-					<stop stop-color='#c42192' offset='0.6' />
-					<stop stop-color='#214dce' offset='0.9' />
-				</radialGradient>
-			</svg>
+			<SocialMedia />
 		</div>
 	)
 }
@@ -160,11 +97,8 @@ const Coms = styled.a`
 		color: #fbc31b;
 	}
 `
-const ComsBig = styled.a`
-	color: white;
-	text-decoration: none;
-`
-const A = styled.a`
+
+const A = styled.div`
 	display: block;
 	position: relative;
 	margin: 3px 10px;
@@ -214,41 +148,4 @@ const Info = styled.input`
 
 const Title = styled.h3`margin-top: 6px;`
 
-const SocialLinks = styled.a`
-	font-size: 36px;
-	position: relative;
-`
-const Social = styled.div`
-	display: inline;
-	#Facebook {
-		color: #3b569c;
-		&:hover {
-			color: #2d4175;
-		}
-	}
-	#Instagram svg * {
-		fill: url(#rg);
-	}
-	#Instagram:hover svg * {
-		fill: url(#rgi);
-	}
-	#Twitter {
-		color: #1ea1f2;
-		&:hover {
-			color: #1575b1;
-		}
-	}
-	#Linkedin {
-		color: #0077b5;
-		&:hover {
-			color: #035a88;
-		}
-	}
-	#YouTube {
-		color: #ff1500;
-		&:hover {
-			color: #bd1303;
-		}
-	}
-`
 export default Contact
