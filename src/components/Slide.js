@@ -21,8 +21,8 @@ const Slide = ({ git, web, content, title }) => {
 }
 
 const glow = keyframes`
- 0%{text-shadow: 0 0 2px #ff7c00, 0 0 4px #ff7c00;}
-  100%{text-shadow: 0 0 4px #ff7c00, 0 0 6px #e21102;}
+ 0%{text-shadow: 0 0 5px #ff3b00, 0 0 7px #e86407;}
+  100%{text-shadow:  0 0 8px #ff0000, 0 0 14px #9a0303;}
 `
 const Styled = styled.div`
 	border-radius: 5px;

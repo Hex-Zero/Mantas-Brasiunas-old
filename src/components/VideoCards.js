@@ -17,7 +17,9 @@ const VideoCards = ({ url, title, content, git, web }) => {
 				onMouseLeave={() => handleSlide('slideout')}>
 				<Loading />
 				<div className={state + ' slide'}>
+					{/* <a className='anchorNoStyle' href={web} target='__blank'> */}
 					<Slide git={git} web={web} title={title} content={content} />
+					{/* </a> */}
 				</div>
 			</Video>
 		</Stlyed>
@@ -41,6 +43,9 @@ const Video = styled.div`
 `
 
 const Stlyed = styled.div`
+	/* .anchorNoStyle {
+		text-decoration: none;
+	} */
 	.card {
 		margin-right: 0;
 		overflow: hidden;
@@ -54,14 +59,14 @@ const Stlyed = styled.div`
 		right: 240px;
 	}
 	.slide {
-		transform: translateX(200%);
+		transform: translateX(100%);
 		height: 100%;
 	}
 	.slidein {
-		animation: ${slidein} 2s forwards;
+		animation: ${slidein} 1s forwards linear;
 	}
 	.slideout {
-		animation: ${slideout} 2s forwards;
+		animation: ${slideout} 1s forwards linear;
 	}
 
 	@media only screen and (max-width: 600px) {
