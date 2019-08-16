@@ -19,9 +19,14 @@ const rotate = keyframes`
 `
 
 const Styled = styled.div`
+	margin-top: 75px;
 	position: absolute;
 	animation: ${rotate} 1s linear infinite;
 	z-index: -2;
+	display: flex;
+	width: 34%;
+
+	justify-content: center;
 	div {
 		border-radius: 100%;
 		width: 100%;
