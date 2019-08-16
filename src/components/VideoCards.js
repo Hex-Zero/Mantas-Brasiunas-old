@@ -4,12 +4,8 @@ import Loading from '../assets/Loading'
 import Slide from './Slide'
 const VideoCards = ({ url, title, content, git, web }) => {
 	const [ state, setstate ] = useState('')
-	const handleSlide = () => {
-		if (state === 'slidein ') {
-			setstate('slideout ')
-		} else {
-			setstate('slidein ')
-		}
+	const handleSlide = (value) => {
+		setstate(value)
 	}
 
 	return (
@@ -17,11 +13,11 @@ const VideoCards = ({ url, title, content, git, web }) => {
 			<Video
 				className='card'
 				url={url}
-				onMouseEnter={handleSlide}
-				onMouseLeave={handleSlide}
-				onClick={handleSlide}>
+				onMouseEnter={() => handleSlide('slidein')}
+				onMouseLeave={() => handleSlide('slideout')}
+				onClick={() => handleSlide(state === 'slidein' ? 'slideout' : 'slidein')}>
 				<Loading />
-				<div className={state + 'slide'} onClick={handleSlide}>
+				<div className={state + ' slide'}>
 					<Slide git={git} web={web} title={title} content={content} />
 				</div>
 			</Video>
