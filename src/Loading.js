@@ -3,14 +3,16 @@ import styled, { keyframes } from 'styled-components'
 const Loading = () => {
 	return (
 		<React.Fragment>
-			<Back />
-			<Rotating>
-				<div className='layer-1'>
-					<div className='layer-2'>
-						<div className='layer-3' />
+			<Styled>
+				<Back />
+				<Rotating>
+					<div className='layer-1'>
+						<div className='layer-2'>
+							<div className='layer-3' />
+						</div>
 					</div>
-				</div>
-			</Rotating>
+				</Rotating>
+			</Styled>
 		</React.Fragment>
 	)
 }
@@ -23,6 +25,12 @@ const rotate = keyframes`
 const glow = keyframes`
  0%{box-shadow: 0 0 6px #ff7c00, 0 0 10px #ff7c00;}
   100%{box-shadow: 0 0 10px #ff7c00, 0 0 16px #e21102;}
+`
+const Styled = styled.div`
+	display: flex;
+	justify-content: center;
+	height: 100%;
+	align-items: center;
 `
 const Back = styled.div`
 	position: absolute;
@@ -39,8 +47,6 @@ const Back = styled.div`
 `
 
 const Rotating = styled.div`
-	margin-top: 4px;
-	margin-left: 4px;
 	position: absolute;
 	z-index: 12;
 

@@ -2,7 +2,7 @@ import React from 'react'
 import styled, { keyframes } from 'styled-components'
 import { ModalContext } from '../context/ModalContext'
 import Modal from './Modal'
-import Loading from '../assets/Loading'
+import Loading from '../Loading'
 const Face = React.lazy(() => import('../assets/Face'))
 const Burger = () => {
 	const { setVisible } = React.useContext(ModalContext)
@@ -11,15 +11,9 @@ const Burger = () => {
 			<Modal />
 			<Styled onClick={() => setVisible(true)}>
 				<div className='imageCircul'>
-					<React.Suspense
-						fallback={
-							<div className='Loading'>
-								<Loading />
-							</div>
-						}>
+					<React.Suspense fallback={<Loading />}>
 						<Face />
 					</React.Suspense>
-
 					<div className='statusCircul'>
 						<div className='statusLight' />
 					</div>
