@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import styled, { keyframes } from 'styled-components'
 import Loading from '../Loading'
-const Slide = React.lazy(() => import('./Slide'))
+import Slide from '../components/Slide'
 const VideoCards = ({ url, title, content, git, web }) => {
 	const [ state, setstate ] = useState('')
 	const handleSlide = (value) => {
@@ -15,11 +15,10 @@ const VideoCards = ({ url, title, content, git, web }) => {
 				url={url}
 				onMouseEnter={() => handleSlide('slidein')}
 				onMouseLeave={() => handleSlide('slideout')}>
-				<React.Suspense fallback={<Loading className='center' />}>
-					<div className={state + ' slide'}>
-						<Slide git={git} web={web} title={title} content={content} />
-					</div>
-				</React.Suspense>
+				<Loading />
+				<div className={state + ' slide'}>
+					<Slide git={git} web={web} title={title} content={content} />
+				</div>
 			</Video>
 		</Stlyed>
 	)

@@ -3,17 +3,18 @@ import styled, { keyframes } from 'styled-components'
 import { ModalContext } from '../context/ModalContext'
 import Modal from './Modal'
 import Loading from '../Loading'
-const Face = React.lazy(() => import('../assets/Face'))
+import Face from '../assets/Face'
 const Burger = () => {
 	const { setVisible } = React.useContext(ModalContext)
 	return (
 		<React.Fragment>
 			<Modal />
+
 			<Styled onClick={() => setVisible(true)}>
 				<div className='imageCircul'>
-					<React.Suspense fallback={<Loading />}>
-						<Face />
-					</React.Suspense>
+					<Loading className='loading' />
+					<Face />
+
 					<div className='statusCircul'>
 						<div className='statusLight' />
 					</div>
@@ -40,6 +41,10 @@ const Styled = styled.div`
 	&:hover .burger,
 	.burger-line {
 		animation: ${glow} 1s ease-in-out infinite alternate;
+	}
+	.ctqToo {
+		width: 100px;
+		height: 100px;
 	}
 	.imageCircul {
 		position: absolute;
