@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import styled, { keyframes } from 'styled-components'
 import Loading from '../assets/Loading'
-import Slide from './Slide'
+const Slide = React.lazy(() => import('./Slide'))
 const VideoCards = ({ url, title, content, git, web }) => {
 	const [ state, setstate ] = useState('')
 	const handleSlide = (value) => {
@@ -15,14 +15,16 @@ const VideoCards = ({ url, title, content, git, web }) => {
 				url={url}
 				onMouseEnter={() => handleSlide('slidein')}
 				onMouseLeave={() => handleSlide('slideout')}>
-				<div className='center'>
-					<Loading />
-				</div>
-				<div className={state + ' slide'}>
-					{/* <a className='anchorNoStyle' href={web} target='__blank'> */}
-					<Slide git={git} web={web} title={title} content={content} />
-					{/* </a> */}
-				</div>
+				<React.Suspense
+					fallback={
+						<div className='center'>
+							<Loading />
+						</div>
+					}>
+					<div className={state + ' slide'}>
+						<Slide git={git} web={web} title={title} content={content} />
+					</div>
+				</React.Suspense>
 			</Video>
 		</Stlyed>
 	)
@@ -33,7 +35,6 @@ const slideout = keyframes`
 0% { transform: translateX(0%);
 100% { transform: translateX(200%); };
 `
-
 const Video = styled.div`
 	width: 100%;
 	height: 100%;
@@ -43,27 +44,16 @@ const Video = styled.div`
 	background-size: 100% 100%;
 	z-index: 1;
 `
-
 const Stlyed = styled.div`
-	/* .anchorNoStyle {
-		text-decoration: none;
-	} */
 	.center {
 		position: absolute;
 		margin: 90px 194px;
-		z-index: -2;
 	}
 	.card {
 		margin-right: 0;
 		overflow: hidden;
 		border-radius: 5px;
 		box-shadow: 3px 5px #555;
-	}
-	.links {
-		display: flex;
-		position: absolute;
-		bottom: 10px;
-		right: 240px;
 	}
 	.slide {
 		transform: translateX(100%);

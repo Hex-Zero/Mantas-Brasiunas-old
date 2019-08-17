@@ -31,7 +31,6 @@ const Styled = styled.div`
 	left: 0;
 	width: 100%;
 	height: 100%;
-	/* transform: translateX(200%); */
 	background: linear-gradient(
 		120deg,
 		rgba(255, 0, 223, 0.18) 0%,

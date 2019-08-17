@@ -26,7 +26,7 @@ const glow = keyframes`
 `
 const Back = styled.div`
 	position: absolute;
-	z-index: -2;
+	z-index: 12;
 	background: -moz-linear-gradient(45deg, rgba(255, 0, 223, 1) 0%, rgba(255, 255, 0, 1) 100%);
 	background: -webkit-linear-gradient(45deg, rgba(255, 0, 223, 1) 0%, rgba(255, 255, 0, 1) 100%);
 	background: -o-linear-gradient(45deg, rgba(255, 0, 223, 1) 0%, rgba(255, 255, 0, 1) 100%);
@@ -42,7 +42,7 @@ const Rotating = styled.div`
 	margin-top: 4px;
 	margin-left: 4px;
 	position: absolute;
-	z-index: -2;
+	z-index: 12;
 
 	div {
 		animation: ${rotate} 1s linear infinite;

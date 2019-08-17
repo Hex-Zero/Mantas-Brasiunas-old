@@ -1,9 +1,9 @@
 import React from 'react'
 import styled, { keyframes } from 'styled-components'
-import face from '../assets/face.jpg'
 import { ModalContext } from '../context/ModalContext'
 import Modal from './Modal'
 import Loading from '../assets/Loading'
+const Face = React.lazy(() => import('../assets/Face'))
 const Burger = () => {
 	const { setVisible } = React.useContext(ModalContext)
 	return (
@@ -11,10 +11,15 @@ const Burger = () => {
 			<Modal />
 			<Styled onClick={() => setVisible(true)}>
 				<div className='imageCircul'>
-					<img className='img' src={face} alt='my face' />
-					<div className='Loading'>
-						<Loading />
-					</div>
+					<React.Suspense
+						fallback={
+							<div className='Loading'>
+								<Loading />
+							</div>
+						}>
+						<Face />
+					</React.Suspense>
+
 					<div className='statusCircul'>
 						<div className='statusLight' />
 					</div>
@@ -42,7 +47,6 @@ const Styled = styled.div`
 	.burger-line {
 		animation: ${glow} 1s ease-in-out infinite alternate;
 	}
-
 	.imageCircul {
 		position: absolute;
 		width: 98%;
@@ -56,7 +60,6 @@ const Styled = styled.div`
 			rgba(255, 0, 0, 1) 50%,
 			rgba(120, 15, 15, 1) 100%
 		);
-
 		animation: ${glow} 1s ease-in-out infinite alternate;
 	}
 	.img {
