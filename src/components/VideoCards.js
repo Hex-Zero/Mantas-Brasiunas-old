@@ -18,7 +18,7 @@ const VideoCards = ({ url, title, content, git, web }) => {
 				className='card'
 				onMouseEnter={() => handleSlide('slidein')}
 				onMouseLeave={() => handleSlide('slideout')}>
-				<img className='projectImage' src={imageUrl[url]} alt={'Vita Smile'} />
+				<Image src={imageUrl[url]} />
 				<Loading />
 				<div className={slide + ' slide'}>
 					<div className='projectSlides'>
@@ -48,5 +48,6 @@ const VideoCards = ({ url, title, content, git, web }) => {
 		</div>
 	)
 }
+const Image = React.memo(({ src }) => <img className='projectImage' src={src} alt={''} />)
 
 export default VideoCards
