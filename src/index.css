@@ -277,6 +277,12 @@ code {
   font-size: 14px;
 }
 
+.projects .firstDummy {
+  position: absolute;
+  width: 0;
+  height: 0;
+}
+
 .projects .fbox {
   display: -webkit-box;
   display: -ms-flexbox;

@@ -7,7 +7,7 @@ const Projects = () => {
 		{ classDummy: 'firstDummy' },
 		{
 			url: 0,
-			title: 'Vita Smile',
+			title: 'Vita Smile Photograpy',
 			content: 'Landing page for a local family run photograpy bussiness',
 			git: 'https://github.com/Hex-Zero/VitaSmilePhotography',
 			web: 'https://vita-smile-photography.uk/'
