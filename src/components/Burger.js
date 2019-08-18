@@ -9,7 +9,6 @@ const Burger = () => {
 	return (
 		<React.Fragment>
 			<Modal />
-
 			<Styled onClick={() => setVisible(true)}>
 				<div className='imageCircul'>
 					<Loading className='loading' />
