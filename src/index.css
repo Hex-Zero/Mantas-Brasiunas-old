@@ -277,6 +277,10 @@ code {
   font-size: 14px;
 }
 
+.projects .hiddenVideoCard {
+  display: none;
+}
+
 .projects .fbox {
   display: -webkit-box;
   display: -ms-flexbox;

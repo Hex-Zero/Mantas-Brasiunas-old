@@ -6,7 +6,7 @@ import first from '../assets/first.jpg'
 import vita from '../assets/vita.jpg'
 import budget from '../assets/budget.jpg'
 const Image = React.lazy(() => import('./Image'))
-const VideoCards = ({ url, title, content, git, web }) => {
+const VideoCards = ({ classOne, url, title, content, git, web }) => {
 	const [ imageUrl ] = useState([ vita, ravenouse, budget, first ])
 	const [ slide, setSlide ] = useState('')
 	const handleSlide = (value) => {
@@ -14,7 +14,7 @@ const VideoCards = ({ url, title, content, git, web }) => {
 	}
 
 	return (
-		<div className='videoCards'>
+		<div className={`videoCards   ${classOne}`}>
 			<div
 				className='card'
 				onMouseEnter={() => handleSlide('slidein')}
@@ -23,7 +23,7 @@ const VideoCards = ({ url, title, content, git, web }) => {
 					<Image src={imageUrl[url]} />
 				</React.Suspense>
 				<Loading />
-				<div className={slide + ' slide'}>
+				<div className={slide + ' slide '}>
 					<div className='projectSlides'>
 						<h1 className='title'>{title}</h1>
 						<h2 className='content'>{content}</h2>

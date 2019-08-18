@@ -4,6 +4,7 @@ import About from '../assets/About'
 import uuid from 'uuid'
 const Projects = () => {
 	const [ cardInfo ] = React.useState([
+		{ classOne: 'hiddenVideoCard' },
 		{
 			url: 0,
 			title: 'Vita Smile Photograpy',
@@ -38,8 +39,9 @@ const Projects = () => {
 		<div className='projects'>
 			<h1 className='projectTitle'>Projects</h1>
 			<div className='fbox'>
-				{cardInfo.map(({ url, title, content, git, web }) => (
+				{cardInfo.map(({ classOne, url, title, content, git, web }) => (
 					<VideoCards
+						classOne={classOne}
 						key={uuid()}
 						url={url}
 						title={title}
