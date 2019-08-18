@@ -7,7 +7,7 @@ const Projects = () => {
 		{ classOne: 'hiddenVideoCard' },
 		{
 			url: 0,
-			title: 'Vita Smile Photograpy',
+			title: 'Vita Smile',
 			content: 'Landing page for a local family run photograpy bussiness',
 			git: 'https://github.com/Hex-Zero/VitaSmilePhotography',
 			web: 'https://vita-smile-photography.uk/'
