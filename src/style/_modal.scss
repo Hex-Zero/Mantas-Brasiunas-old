@@ -1,0 +1,108 @@
+.modal {
+	.modalCover {
+		position: fixed;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		background: #f5f5f5a3;
+		opacity: 0;
+		z-index: 2;
+		visibility: hidden;
+	}
+	.modalCoverUp {
+		animation: coverUp 750ms forwards;
+	}
+	.modalCoverDown {
+		animation: coverDown 750ms forwards;
+	}
+	.modalInside {
+		visibility: 'visible';
+		top: -300px;
+		position: fixed;
+		width: 300px;
+		height: 260px;
+		margin-left: auto;
+		margin-right: auto;
+		left: 0;
+		right: 0;
+		background: white;
+		text-align: center;
+		border: solid 3px #f86e00;
+		border-radius: 4px;
+
+		z-index: 3;
+	}
+	.modalIn {
+		animation: ModalIn 750ms linear forwards;
+	}
+	.modalOut {
+		animation: ModalOut 750ms linear forwards;
+	}
+
+	.close {
+		position: absolute;
+		right: 3px;
+		top: 3px;
+		color: #f86e00;
+		border: solid 2px #f86e00;
+		padding: 2px;
+		border-radius: 100%;
+		cursor: pointer;
+		-webkit-tap-highlight-color: transparent;
+		-webkit-touch-callout: none;
+		-webkit-user-select: none;
+		-khtml-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+		&:hover {
+			color: gray;
+			border: solid 2px gray;
+		}
+	}
+}
+
+@keyframes ModalIn {
+	0% {
+		transform: translateY(0%);
+	}
+	100% {
+		transform: translateY(150%);
+	}
+}
+@keyframes ModalOut {
+	0% {
+		transform: translateY(150%);
+	}
+	100% {
+		transform: translateY(0%);
+	}
+}
+
+@keyframes coverUp {
+	0% {
+		visibility: hidden;
+		opacity: 0;
+	}
+	5% {
+		visibility: visible;
+	}
+	100% {
+		visibility: visible;
+		opacity: 1;
+	}
+}
+
+@keyframes coverDown {
+	0% {
+		visibility: visible;
+		opacity: 1;
+	}
+	95% {
+		visibility: visible;
+	}
+	100% {
+		opacity: 0;
+		visibility: hidden;
+	}
+}

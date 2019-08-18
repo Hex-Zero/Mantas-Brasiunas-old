@@ -1,16 +1,15 @@
 .projects {
-	margin-left: 4%;
-	margin-right: 4%;
+	margin-left: 7%;
+	margin-right: 7%;
 	.About {
-		margin: 0 1%;
+		margin: 0 5%;
 		margin-top: 40px;
 		text-align: center;
-		width: 720px;
+		max-width: 1080px;
 		border: solid 4px #f86e00;
 		border-radius: 4px;
 		padding: 5px 10px;
 		color: #984401;
-
 		box-shadow: 2px 2px #555;
 		font-size: 14px;
 	}
@@ -21,10 +20,8 @@
 		justify-content: center;
 	}
 	.card {
-		margin-top: 2vw;
-		margin-left: 2vw;
-		width: 450px;
-		height: 250px;
+		width: 100%;
+		height: 100%;
 		border: solid 2px gray;
 		border-radius: 6px;
 		&:hover {
@@ -32,8 +29,6 @@
 		}
 	}
 	@media only screen and (max-width: 600px) {
-		margin-left: 15%;
-		margin-right: 15%;
 		.card {
 			width: 350px;
 			height: 190px;

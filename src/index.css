@@ -259,15 +259,15 @@ code {
 }
 
 .projects {
-  margin-left: 4%;
-  margin-right: 4%;
+  margin-left: 7%;
+  margin-right: 7%;
 }
 
 .projects .About {
-  margin: 0 1%;
+  margin: 0 5%;
   margin-top: 40px;
   text-align: center;
-  width: 720px;
+  max-width: 1080px;
   border: solid 4px #f86e00;
   border-radius: 4px;
   padding: 5px 10px;
@@ -290,10 +290,8 @@ code {
 }
 
 .projects .card {
-  margin-top: 2vw;
-  margin-left: 2vw;
-  width: 450px;
-  height: 250px;
+  width: 100%;
+  height: 100%;
   border: solid 2px gray;
   border-radius: 6px;
 }
@@ -303,10 +301,6 @@ code {
 }
 
 @media only screen and (max-width: 600px) {
-  .projects {
-    margin-left: 15%;
-    margin-right: 15%;
-  }
   .projects .card {
     width: 350px;
     height: 190px;
@@ -601,6 +595,417 @@ code {
   }
   100% {
     text-shadow: 0 0 8px #ff0000, 0 0 14px #9a0303;
+  }
+}
+
+.burger {
+  position: fixed;
+  top: 8px;
+  right: 2px;
+  width: 100px;
+  height: 100px;
+}
+
+.burger:hover .burger,
+.burger .burger-line {
+  -webkit-animation: burgerGlow 1s ease-in-out infinite alternate;
+          animation: burgerGlow 1s ease-in-out infinite alternate;
+}
+
+.burger .ctqToo {
+  width: 100px;
+  height: 100px;
+}
+
+.burger .imageCircul {
+  position: absolute;
+  width: 98%;
+  height: 98%;
+  border-radius: 100%;
+  border: solid 1px #780000;
+  z-index: -3;
+  background: linear-gradient(120deg, maroon 0%, red 50%, #780f0f 100%);
+  -webkit-animation: burgerGlow 1s ease-in-out infinite alternate;
+          animation: burgerGlow 1s ease-in-out infinite alternate;
+}
+
+.burger .img {
+  position: absolute;
+  margin: 4% 4%;
+  width: 90%;
+  height: 90%;
+  border-radius: 100%;
+  border: solid 1px #780000;
+}
+
+.burger .statusCircul {
+  position: absolute;
+  bottom: -5%;
+  left: 0;
+  width: 33%;
+  height: 33%;
+  border-radius: 100%;
+  border: solid 1px #780000;
+  background: linear-gradient(120deg, maroon 0%, red 50%, #780f0f 100%);
+}
+
+.burger .statusLight {
+  margin: 2px 2px;
+  border-radius: 100%;
+  width: 82%;
+  height: 82%;
+  border: solid 1px #780000;
+  background: radial-gradient(ellipse at center, yellow 0%, #4ace01 67%, #4ace01 100%);
+}
+
+.burger .burger {
+  position: absolute;
+  top: 73%;
+  right: 5%;
+  width: 31%;
+  height: 31%;
+  border-radius: 13%;
+  border: solid 1px #780000;
+  background: -webkit-gradient(linear, left bottom, left top, from(maroon), color-stop(50%, red), to(#780f0f));
+  background: linear-gradient(0deg, maroon 0%, red 50%, #780f0f 100%);
+}
+
+.burger .burger-line {
+  margin: 5px auto;
+  width: 60%;
+  border-radius: 8px;
+  border: solid 2px #780000;
+}
+
+.burger .Loading {
+  position: absolute;
+  margin: 15%;
+  z-index: -2;
+}
+
+@-webkit-keyframes burgerGlow {
+  0% {
+    -webkit-box-shadow: 0 0 6px #ff7c00, 0 0 10px #ff7c00;
+            box-shadow: 0 0 6px #ff7c00, 0 0 10px #ff7c00;
+  }
+  100% {
+    -webkit-box-shadow: 0 0 10px #ff7c00, 0 0 16px #e21102;
+            box-shadow: 0 0 10px #ff7c00, 0 0 16px #e21102;
+  }
+}
+
+@keyframes burgerGlow {
+  0% {
+    -webkit-box-shadow: 0 0 6px #ff7c00, 0 0 10px #ff7c00;
+            box-shadow: 0 0 6px #ff7c00, 0 0 10px #ff7c00;
+  }
+  100% {
+    -webkit-box-shadow: 0 0 10px #ff7c00, 0 0 16px #e21102;
+            box-shadow: 0 0 10px #ff7c00, 0 0 16px #e21102;
+  }
+}
+
+.modal .modalCover {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  background: #f5f5f5a3;
+  opacity: 0;
+  z-index: 2;
+  visibility: hidden;
+}
+
+.modal .modalCoverUp {
+  -webkit-animation: coverUp 750ms forwards;
+          animation: coverUp 750ms forwards;
+}
+
+.modal .modalCoverDown {
+  -webkit-animation: coverDown 750ms forwards;
+          animation: coverDown 750ms forwards;
+}
+
+.modal .modalInside {
+  visibility: 'visible';
+  top: -300px;
+  position: fixed;
+  width: 300px;
+  height: 260px;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  background: white;
+  text-align: center;
+  border: solid 3px #f86e00;
+  border-radius: 4px;
+  z-index: 3;
+}
+
+.modal .modalIn {
+  -webkit-animation: ModalIn 750ms linear forwards;
+          animation: ModalIn 750ms linear forwards;
+}
+
+.modal .modalOut {
+  -webkit-animation: ModalOut 750ms linear forwards;
+          animation: ModalOut 750ms linear forwards;
+}
+
+.modal .close {
+  position: absolute;
+  right: 3px;
+  top: 3px;
+  color: #f86e00;
+  border: solid 2px #f86e00;
+  padding: 2px;
+  border-radius: 100%;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.modal .close:hover {
+  color: gray;
+  border: solid 2px gray;
+}
+
+@-webkit-keyframes ModalIn {
+  0% {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+  100% {
+    -webkit-transform: translateY(150%);
+            transform: translateY(150%);
+  }
+}
+
+@keyframes ModalIn {
+  0% {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+  100% {
+    -webkit-transform: translateY(150%);
+            transform: translateY(150%);
+  }
+}
+
+@-webkit-keyframes ModalOut {
+  0% {
+    -webkit-transform: translateY(150%);
+            transform: translateY(150%);
+  }
+  100% {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+}
+
+@keyframes ModalOut {
+  0% {
+    -webkit-transform: translateY(150%);
+            transform: translateY(150%);
+  }
+  100% {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+}
+
+@-webkit-keyframes coverUp {
+  0% {
+    visibility: hidden;
+    opacity: 0;
+  }
+  5% {
+    visibility: visible;
+  }
+  100% {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+@keyframes coverUp {
+  0% {
+    visibility: hidden;
+    opacity: 0;
+  }
+  5% {
+    visibility: visible;
+  }
+  100% {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes coverDown {
+  0% {
+    visibility: visible;
+    opacity: 1;
+  }
+  95% {
+    visibility: visible;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes coverDown {
+  0% {
+    visibility: visible;
+    opacity: 1;
+  }
+  95% {
+    visibility: visible;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+.copyAlert {
+  width: 150px;
+  font-weight: 600;
+  font-size: 20px;
+  position: fixed;
+  background-color: #f86e00;
+  color: white;
+  left: 0;
+  right: 0;
+  border: solid 3px white;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 5px;
+  padding: 5px 10px;
+  z-index: 4;
+  opacity: 0;
+  -webkit-animation: fade 2200ms forwards;
+          animation: fade 2200ms forwards;
+}
+
+.contactTitle {
+  margin-top: 6px;
+}
+
+.contactNode {
+  display: block;
+  position: relative;
+  margin: 3px 10px;
+  color: white;
+  background: #f86e00;
+  border: solid 3px #f86e00;
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.contactNode:hover {
+  background: #b35306;
+}
+
+.contactNode .cover {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-weight: 600;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 2px;
+  background-color: #f86e00;
+}
+
+.contactNode .cover:hover {
+  background: #b35306;
+}
+
+.contactNode .cover p {
+  margin-left: 7px;
+}
+
+.contactNode .icons {
+  position: absolute;
+  right: 5px;
+  cursor: pointer;
+  z-index: 3;
+}
+
+.contactNode .input {
+  font-weight: 700;
+  color: white;
+  background: #00000000;
+  border: none;
+  cursor: pointer;
+}
+
+.contactNode .input:focus {
+  outline: none;
+}
+
+.contactNode .contactLink {
+  color: white;
+  position: absolute;
+  right: 20px;
+}
+
+.contactNode .contactLink:hover {
+  right: 21px;
+  top: 1px;
+  color: #fbc31b;
+}
+
+.contactNode .copy:hover {
+  position: absolute;
+  color: #fbc31b;
+  right: 1px;
+  top: 1px;
+}
+
+@-webkit-keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }
 /*# sourceMappingURL=index.css.map */

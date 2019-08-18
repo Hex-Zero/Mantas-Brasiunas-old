@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import Loading from '../Loading'
-import Slide from '../components/Slide'
+import { FaGithub, FaGlobe } from 'react-icons/fa'
 const VideoCards = ({ url, title, content, git, web }) => {
 	const [ state, setstate ] = useState('')
 	const handleSlide = (value) => {
@@ -16,7 +16,28 @@ const VideoCards = ({ url, title, content, git, web }) => {
 				<img className='projectImage' src={url} alt={title} />
 				<Loading />
 				<div className={state + ' slide'}>
-					<Slide git={git} web={web} title={title} content={content} />
+					<div className='projectSlides'>
+						<h1 className='title'>{title}</h1>
+						<h2 className='content'>{content}</h2>
+						<div className='bottom-Line'>
+							<div className='tagWrapper'>
+								<a
+									className='web tags'
+									href={web}
+									target='__blank'
+									alt='website link'>
+									<FaGlobe />
+								</a>
+								<a
+									className='git tags'
+									href={git}
+									target='__blank'
+									alt='github link'>
+									<FaGithub />
+								</a>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>

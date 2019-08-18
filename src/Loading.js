@@ -1,7 +1,7 @@
 import React from 'react'
 const Loading = () => {
 	return (
-		<div className='loadingSign'>
+		<div className='loadingSign loading'>
 			<div className='back' />
 			<div className='rotating'>
 				<div className='layer-1'>
