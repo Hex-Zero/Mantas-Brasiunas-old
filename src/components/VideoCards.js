@@ -6,7 +6,7 @@ import first from '../assets/first.jpg'
 import vita from '../assets/vita.jpg'
 import budget from '../assets/budget.jpg'
 const Image = React.lazy(() => import('./Image'))
-const VideoCards = ({ url, title, content, git, web }) => {
+const VideoCards = React.memo(({ url, title, content, git, web }) => {
 	const [ imageUrl ] = useState([ vita, ravenouse, budget, first ])
 	const [ slide, setSlide ] = useState('')
 	const handleSlide = (value) => {
@@ -49,6 +49,6 @@ const VideoCards = ({ url, title, content, git, web }) => {
 			</div>
 		</div>
 	)
-}
+})
 
 export default VideoCards
