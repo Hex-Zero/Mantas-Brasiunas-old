@@ -4,12 +4,13 @@ import About from '../assets/About'
 import uuid from 'uuid'
 const Projects = () => {
 	const [ cardInfo ] = React.useState([
+		{ classDummy: 'firstDummy' },
 		{
-			url: 2,
-			title: 'Budget Calculator',
-			content: 'Exploration of React-Hooks in a budget calculator application',
-			git: 'https://github.com/Hex-Zero/React-Hook-App',
-			web: 'https://hex-zero.github.io/React-Hook-App/'
+			url: 0,
+			title: 'Vita Smile',
+			content: 'Landing page for a local family run photograpy bussiness',
+			git: 'https://github.com/Hex-Zero/VitaSmilePhotography',
+			web: 'https://vita-smile-photography.uk/'
 		},
 		{
 			url: 1,
@@ -19,11 +20,11 @@ const Projects = () => {
 			web: 'https://hex-zero.github.io/React-Codecademy/'
 		},
 		{
-			url: 0,
-			title: 'Vita Smile',
-			content: 'Landing page for a local family run photograpy bussiness',
-			git: 'https://github.com/Hex-Zero/VitaSmilePhotography',
-			web: 'https://vita-smile-photography.uk/'
+			url: 2,
+			title: 'Budget Calculator',
+			content: 'Exploration of React-Hooks in a budget calculator application',
+			git: 'https://github.com/Hex-Zero/React-Hook-App',
+			web: 'https://hex-zero.github.io/React-Hook-App/'
 		},
 		{
 			url: 3,
@@ -38,8 +39,9 @@ const Projects = () => {
 		<div className='projects'>
 			<h1 className='projectTitle'>Projects</h1>
 			<div className='fbox'>
-				{cardInfo.map(({ url, title, content, git, web }) => (
+				{cardInfo.map(({ classDummy, url, title, content, git, web }) => (
 					<VideoCards
+						classDummy={classDummy}
 						key={uuid()}
 						url={url}
 						title={title}
