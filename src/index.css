@@ -277,12 +277,6 @@ code {
   font-size: 14px;
 }
 
-.projects .firstDummy {
-  position: absolute;
-  width: 0;
-  height: 0;
-}
-
 .projects .fbox {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -293,24 +287,6 @@ code {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-}
-
-.projects .card {
-  width: 100%;
-  height: 100%;
-  border: solid 2px gray;
-  border-radius: 6px;
-}
-
-.projects .card:hover {
-  border: solid 2px #ff6a00;
-}
-
-@media only screen and (max-width: 600px) {
-  .projects .card {
-    width: 350px;
-    height: 190px;
-  }
 }
 
 .projects .projectTitle {
@@ -360,11 +336,18 @@ code {
 }
 
 .videoCards .card {
+  width: 100%;
+  height: 100%;
+  border: solid 2px gray;
+  border-radius: 6px;
   margin-right: 0;
   overflow: hidden;
-  border-radius: 5px;
   -webkit-box-shadow: 3px 5px #555;
           box-shadow: 3px 5px #555;
+}
+
+.videoCards .card:hover {
+  border: solid 2px #ff6a00;
 }
 
 .videoCards .slide {

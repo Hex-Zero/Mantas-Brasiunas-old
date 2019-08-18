@@ -13,31 +13,11 @@
 		box-shadow: 2px 2px #555;
 		font-size: 14px;
 	}
-	.firstDummy {
-		position: absolute;
-		width: 0;
-		height: 0;
-	}
 	.fbox {
 		display: flex;
 		width: 100%;
 		flex-wrap: wrap;
 		justify-content: center;
-	}
-	.card {
-		width: 100%;
-		height: 100%;
-		border: solid 2px gray;
-		border-radius: 6px;
-		&:hover {
-			border: solid 2px #ff6a00;
-		}
-	}
-	@media only screen and (max-width: 600px) {
-		.card {
-			width: 350px;
-			height: 190px;
-		}
 	}
 	.projectTitle {
 		left: 0;

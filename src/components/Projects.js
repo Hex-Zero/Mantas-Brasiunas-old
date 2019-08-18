@@ -4,7 +4,7 @@ import About from '../assets/About'
 import uuid from 'uuid'
 const Projects = () => {
 	const [ cardInfo ] = React.useState([
-		{ classDummy: 'firstDummy' },
+		// { classDummy: 'firstDummy' },
 		{
 			url: 0,
 			title: 'Vita Smile Photograpy',
