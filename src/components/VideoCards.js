@@ -1,9 +1,12 @@
 import React, { useState } from 'react'
 import Loading from '../Loading'
 import { FaGithub, FaGlobe } from 'react-icons/fa'
-import { ModalContext } from '../context/ModalContext'
+import ravenouse from '../assets/ravenouse.jpg'
+import first from '../assets/first.gif'
+import vita from '../assets/vita.gif'
+import budget from '../assets/budget.jpg'
 const VideoCards = ({ url, title, content, git, web }) => {
-	const { imageUrl } = React.useContext(ModalContext)
+	const [ imageUrl ] = useState([ vita, ravenouse, budget, first ])
 	const [ slide, setSlide ] = useState('')
 	const handleSlide = (value) => {
 		setSlide(value)
@@ -15,7 +18,7 @@ const VideoCards = ({ url, title, content, git, web }) => {
 				className='card'
 				onMouseEnter={() => handleSlide('slidein')}
 				onMouseLeave={() => handleSlide('slideout')}>
-				<img className='projectImage' src={imageUrl[url]} alt={title} />
+				<img className='projectImage' src={imageUrl[url]} alt={'Vita Smile'} />
 				<Loading />
 				<div className={slide + ' slide'}>
 					<div className='projectSlides'>
