@@ -1,5 +1,5 @@
 import React from 'react'
-const Loading = () => {
+const Loading = React.memo(() => {
 	return (
 		<div className='loadingSign loading'>
 			<div className='back' />
@@ -12,5 +12,5 @@ const Loading = () => {
 			</div>
 		</div>
 	)
-}
+})
 export default Loading

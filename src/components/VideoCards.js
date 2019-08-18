@@ -23,7 +23,6 @@ const VideoCards = ({ url, title, content, git, web }) => {
 				<React.Suspense fallback={<div />}>
 					<Image src={imageUrl[url]} />
 				</React.Suspense>
-
 				<div className={slide + ' slide'}>
 					<div className='projectSlides'>
 						<h1 className='title'>{title}</h1>
