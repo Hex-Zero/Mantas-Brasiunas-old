@@ -52,22 +52,9 @@
 	}
 }
 .firstDummy {
-	visibility: hidden;
+	z-index: -20;
 	position: absolute;
-	width: 0px;
-	height: 0px;
-	.projectImage {
-		width: 0px;
-		height: 0px;
-	}
-	@media only screen and (max-width: 600px) {
-		width: 350px;
-		height: 190px;
-		.projectImage {
-			width: 350px;
-			height: 190px;
-		}
-	}
+	margin: 10px 0;
 }
 @keyframes slidein {
 	100% {

@@ -385,26 +385,9 @@ code {
 }
 
 .firstDummy {
-  visibility: hidden;
+  z-index: -20;
   position: absolute;
-  width: 0px;
-  height: 0px;
-}
-
-.firstDummy .projectImage {
-  width: 0px;
-  height: 0px;
-}
-
-@media only screen and (max-width: 600px) {
-  .firstDummy {
-    width: 350px;
-    height: 190px;
-  }
-  .firstDummy .projectImage {
-    width: 350px;
-    height: 190px;
-  }
+  margin: 10px 0;
 }
 
 @-webkit-keyframes slidein {
