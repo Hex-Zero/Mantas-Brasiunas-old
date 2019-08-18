@@ -9,11 +9,9 @@
 		"react-icons": "^3.7.0",
 		"react-router-dom": "^5.0.1",
 		"react-scripts": "^3.1.0",
-		"react-snap": "^1.23.0",
 		"uuid": "^3.3.2"
 	},
 	"scripts": {
-		"postbuild": "react-snap",
 		"start": "react-scripts start",
 		"build": "react-scripts build",
 		"test": "react-scripts test",
@@ -23,11 +21,7 @@
 		"extends": "react-app"
 	},
 	"browserslist": {
-		"production": [
-			">0.2%",
-			"not dead",
-			"not op_mini all"
-		],
+		"production": [ ">0.2%", "not dead", "not op_mini all" ],
 		"development": [
 			"last 1 chrome version",
 			"last 1 firefox version",
