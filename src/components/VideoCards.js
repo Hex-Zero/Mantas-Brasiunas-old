@@ -15,12 +15,11 @@ const VideoCards = ({ url, title, content, git, web }) => {
 
 	return (
 		<div className='videoCards'>
-			<Loading />
 			<div
 				className='card'
 				onMouseEnter={() => handleSlide('slidein')}
 				onMouseLeave={() => handleSlide('slideout')}>
-				<React.Suspense fallback={<div />}>
+				<React.Suspense fallback={<Loading />}>
 					<Image src={imageUrl[url]} />
 				</React.Suspense>
 				<div className={slide + ' slide'}>
