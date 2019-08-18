@@ -10,7 +10,6 @@
 		"react-router-dom": "^5.0.1",
 		"react-scripts": "^3.1.0",
 		"react-snap": "^1.23.0",
-		"styled-components": "^4.3.2",
 		"uuid": "^3.3.2"
 	},
 	"scripts": {
@@ -24,7 +23,11 @@
 		"extends": "react-app"
 	},
 	"browserslist": {
-		"production": [ ">0.2%", "not dead", "not op_mini all" ],
+		"production": [
+			">0.2%",
+			"not dead",
+			"not op_mini all"
+		],
 		"development": [
 			"last 1 chrome version",
 			"last 1 firefox version",

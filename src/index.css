@@ -327,6 +327,15 @@ code {
   background-color: whitesmoke;
 }
 
+.projects .about-title {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.projects .about-content {
+  text-align: left;
+}
+
 .videoCards {
   margin: 10px;
   width: 450px;
@@ -1007,5 +1016,50 @@ code {
   100% {
     opacity: 0;
   }
+}
+
+.social #Facebook {
+  color: #3b569c;
+}
+
+.social #Facebook:hover {
+  color: #2d4175;
+}
+
+.social #Instagram svg * {
+  fill: url(#instagramSvg);
+}
+
+.social #Instagram:hover svg * {
+  fill: url(#instagramSvgHover);
+}
+
+.social #Twitter {
+  color: #1ea1f2;
+}
+
+.social #Twitter:hover {
+  color: #1575b1;
+}
+
+.social #Linkedin {
+  color: #0077b5;
+}
+
+.social #Linkedin:hover {
+  color: #035a88;
+}
+
+.social #YouTube {
+  color: #ff1500;
+}
+
+.social #YouTube:hover {
+  color: #bd1303;
+}
+
+.social .link {
+  font-size: 36px;
+  position: relative;
 }
 /*# sourceMappingURL=index.css.map */
