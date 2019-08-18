@@ -23,17 +23,6 @@
 			border: solid 2px #ff6a00;
 		}
 	}
-	.slide {
-		transform: translateX(100%);
-		height: 100%;
-	}
-	.slidein {
-		animation: slidein 1s forwards linear;
-	}
-	.slideout {
-		animation: slideout 1s forwards linear;
-	}
-
 	@media only screen and (max-width: 600px) {
 		width: 350px;
 		height: 190px;
@@ -48,18 +37,5 @@
 		.center {
 			margin: 64px 133px;
 		}
-	}
-}
-@keyframes slidein {
-	100% {
-		transform: translateX(0%);
-	}
-}
-@keyframes slideout {
-	0% {
-		transform: translateX(0%);
-	}
-	100% {
-		transform: translateX(200%);
 	}
 }
