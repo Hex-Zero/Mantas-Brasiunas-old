@@ -384,6 +384,29 @@ code {
   }
 }
 
+.firstDummy {
+  visibility: hidden;
+  position: absolute;
+  width: 0px;
+  height: 0px;
+}
+
+.firstDummy .projectImage {
+  width: 0px;
+  height: 0px;
+}
+
+@media only screen and (max-width: 600px) {
+  .firstDummy {
+    width: 350px;
+    height: 190px;
+  }
+  .firstDummy .projectImage {
+    width: 350px;
+    height: 190px;
+  }
+}
+
 @-webkit-keyframes slidein {
   100% {
     -webkit-transform: translateX(0%);
