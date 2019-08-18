@@ -384,12 +384,6 @@ code {
   }
 }
 
-.firstDummy {
-  z-index: -20;
-  position: absolute;
-  margin: 10px 0;
-}
-
 @-webkit-keyframes slidein {
   100% {
     -webkit-transform: translateX(0%);

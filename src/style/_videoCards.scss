@@ -2,7 +2,6 @@
 	margin: 10px;
 	width: 450px;
 	height: 250px;
-
 	.projectImage {
 		position: absolute;
 		width: 450px;
@@ -50,11 +49,6 @@
 			margin: 64px 133px;
 		}
 	}
-}
-.firstDummy {
-	z-index: -20;
-	position: absolute;
-	margin: 10px 0;
 }
 @keyframes slidein {
 	100% {
