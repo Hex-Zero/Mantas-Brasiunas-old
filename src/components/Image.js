@@ -1,5 +1,5 @@
 import React from 'react'
 
-const Image = ({ src }) => <img className='projectImage' src={src} alt={''} />
+const Image = React.memo(({ src }) => <img className='projectImage' src={src} alt={''} />)
 
 export default Image

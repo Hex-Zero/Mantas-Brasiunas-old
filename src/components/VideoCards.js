@@ -19,9 +19,10 @@ const VideoCards = ({ url, title, content, git, web }) => {
 				className='card'
 				onMouseEnter={() => handleSlide('slidein')}
 				onMouseLeave={() => handleSlide('slideout')}>
-				<React.Suspense fallback={<Loading />}>
+				<React.Suspense fallback={''}>
 					<Image src={imageUrl[url]} />
 				</React.Suspense>
+				<Loading />
 				<div className={slide + ' slide'}>
 					<div className='projectSlides'>
 						<h1 className='title'>{title}</h1>

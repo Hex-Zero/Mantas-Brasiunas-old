@@ -29,7 +29,7 @@ const Projects = () => {
 					web='https://hex-zero.github.io/React-Hook-App/'
 				/>
 				<VideoCards
-					url={1}
+					url={3}
 					title={'My First Website'}
 					content={'My first steps in JavaScript, Made a classic memory game'}
 					git='https://github.com/Hex-Zero/xFirst'
