@@ -5,6 +5,7 @@ import ravenouse from '../assets/ravenouse.jpg'
 import first from '../assets/first.gif'
 import vita from '../assets/vita.gif'
 import budget from '../assets/budget.jpg'
+const Image = React.lazy(() => import('./Image'))
 const VideoCards = ({ url, title, content, git, web }) => {
 	const [ imageUrl ] = useState([ vita, ravenouse, budget, first ])
 	const [ slide, setSlide ] = useState('')
@@ -14,12 +15,15 @@ const VideoCards = ({ url, title, content, git, web }) => {
 
 	return (
 		<div className='videoCards'>
+			<Loading />
 			<div
 				className='card'
 				onMouseEnter={() => handleSlide('slidein')}
 				onMouseLeave={() => handleSlide('slideout')}>
-				<Image src={imageUrl[url]} />
-				<Loading />
+				<React.Suspense fallback={<div />}>
+					<Image src={imageUrl[url]} />
+				</React.Suspense>
+
 				<div className={slide + ' slide'}>
 					<div className='projectSlides'>
 						<h1 className='title'>{title}</h1>
@@ -48,6 +52,5 @@ const VideoCards = ({ url, title, content, git, web }) => {
 		</div>
 	)
 }
-const Image = React.memo(({ src }) => <img className='projectImage' src={src} alt={''} />)
 
 export default VideoCards
