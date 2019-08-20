@@ -10,9 +10,8 @@ const Burger = () => {
 			<Modal />
 			<div className='burger' onClick={() => setVisible('show')}>
 				<div className='imageCircul'>
-					<Loading />
+					<Loading className='Loading' />
 					<img className='img' src={face} alt='my face' />
-
 					<div className='statusCircul'>
 						<div className='statusLight' />
 					</div>

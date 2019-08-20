@@ -1,6 +1,7 @@
 .projects {
 	margin-left: 7%;
 	margin-right: 7%;
+	cursor: default;
 	.About {
 		margin: 0 5%;
 		margin-top: 40px;
@@ -14,10 +15,12 @@
 		font-size: 14px;
 	}
 	.fbox {
+		margin: 0 auto;
 		display: flex;
 		width: 100%;
 		flex-wrap: wrap;
 		justify-content: center;
+		max-width: 1000px;
 	}
 	.projectTitle {
 		left: 0;
@@ -34,6 +37,9 @@
 		box-shadow: 2px 2px #555;
 		&:hover {
 			background-color: whitesmoke;
+		}
+		p {
+			font-size: 15px;
 		}
 	}
 	.about-title {

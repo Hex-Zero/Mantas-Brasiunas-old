@@ -9,16 +9,19 @@
 	right: 0;
 	border: solid 3px white;
 	text-align: center;
-	margin-left: auto;
-	margin-right: auto;
+	margin: 45px auto;
 	border-radius: 5px;
 	padding: 5px 10px;
 	z-index: 4;
 	opacity: 0;
-	animation: fade 2200ms forwards;
+	cursor: pointer;
+}
+.showAlert {
+	animation: fade 3s forwards cubic-bezier(0, .96, .31, 1);
 }
 .contactTitle {
-	margin-top: 6px;
+	margin-top: 15px;
+	cursor: default;
 }
 .contactNode {
 	display: block;
@@ -63,8 +66,13 @@
 		background: #00000000;
 		border: none;
 		cursor: pointer;
+
+		user-select: none;
 		&:focus {
 			outline: none;
+		}
+		&::selection {
+			background: #ffb7b700;
 		}
 	}
 	.contactLink {
@@ -91,13 +99,11 @@
 	0% {
 		opacity: 0;
 	}
-	40% {
-		opacity: 1;
-	}
-	60% {
+	50% {
 		opacity: 1;
 	}
 	100% {
 		opacity: 0;
+		visibility: hidden;
 	}
 }

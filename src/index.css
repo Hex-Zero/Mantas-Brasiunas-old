@@ -261,6 +261,7 @@ code {
 .projects {
   margin-left: 7%;
   margin-right: 7%;
+  cursor: default;
 }
 
 .projects .About {
@@ -278,6 +279,7 @@ code {
 }
 
 .projects .fbox {
+  margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -287,6 +289,7 @@ code {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  max-width: 1000px;
 }
 
 .projects .projectTitle {
@@ -307,6 +310,10 @@ code {
 
 .projects .projectTitle:hover {
   background-color: whitesmoke;
+}
+
+.projects .projectTitle p {
+  font-size: 15px;
 }
 
 .projects .about-title {
@@ -485,7 +492,7 @@ code {
   bottom: 0;
   width: 100%;
   height: 20%;
-  background: linear-gradient(120deg, rgba(255, 124, 0, 0) 0%, rgba(255, 119, 0, 0) 11.5%, #ff7600 12%, #ff4800 60%, #ff7c00 100%);
+  background: linear-gradient(120deg, rgba(255, 124, 0, 0) 0%, rgba(255, 119, 0, 0) 11.5%, #ff7600 12%, #bb0000 60%, #ff7c00 100%);
 }
 
 .projectSlides .title,
@@ -504,6 +511,11 @@ code {
   margin-top: 10px;
 }
 
+.projectSlides .tagWrapper p {
+  margin-left: 5px;
+  font-size: 16px;
+}
+
 .projectSlides .tags {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -516,6 +528,7 @@ code {
 
 .projectSlides .tags:hover {
   color: #fdefef;
+  text-shadow: 1px 1px black;
 }
 
 @media only screen and (max-width: 600px) {
@@ -623,6 +636,13 @@ code {
           animation: burgerGlow 1s ease-in-out infinite alternate;
 }
 
+.burger .imageCircul .loadingSign {
+  position: absolute;
+  z-index: -2;
+  width: 100px;
+  height: 100px;
+}
+
 .burger .img {
   position: absolute;
   margin: 4% 4%;
@@ -669,12 +689,6 @@ code {
   width: 60%;
   border-radius: 8px;
   border: solid 2px #780000;
-}
-
-.burger .Loading {
-  position: absolute;
-  margin: 15%;
-  z-index: -2;
 }
 
 @-webkit-keyframes burgerGlow {
@@ -880,18 +894,22 @@ code {
   right: 0;
   border: solid 3px white;
   text-align: center;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 45px auto;
   border-radius: 5px;
   padding: 5px 10px;
   z-index: 4;
   opacity: 0;
-  -webkit-animation: fade 2200ms forwards;
-          animation: fade 2200ms forwards;
+  cursor: pointer;
+}
+
+.showAlert {
+  -webkit-animation: fade 3s forwards cubic-bezier(0, 0.96, 0.31, 1);
+          animation: fade 3s forwards cubic-bezier(0, 0.96, 0.31, 1);
 }
 
 .contactTitle {
-  margin-top: 6px;
+  margin-top: 15px;
+  cursor: default;
 }
 
 .contactNode {
@@ -948,10 +966,22 @@ code {
   background: #00000000;
   border: none;
   cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 .contactNode .input:focus {
   outline: none;
+}
+
+.contactNode .input::-moz-selection {
+  background: #ffb7b700;
+}
+
+.contactNode .input::selection {
+  background: #ffb7b700;
 }
 
 .contactNode .contactLink {
@@ -977,14 +1007,12 @@ code {
   0% {
     opacity: 0;
   }
-  40% {
-    opacity: 1;
-  }
-  60% {
+  50% {
     opacity: 1;
   }
   100% {
     opacity: 0;
+    visibility: hidden;
   }
 }
 
@@ -992,14 +1020,12 @@ code {
   0% {
     opacity: 0;
   }
-  40% {
-    opacity: 1;
-  }
-  60% {
+  50% {
     opacity: 1;
   }
   100% {
     opacity: 0;
+    visibility: hidden;
   }
 }
 

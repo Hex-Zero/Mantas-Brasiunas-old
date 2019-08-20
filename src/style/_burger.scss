@@ -26,6 +26,12 @@
 			rgba(120, 15, 15, 1) 100%
 		);
 		animation: burgerGlow 1s ease-in-out infinite alternate;
+		.loadingSign {
+			position: absolute;
+			z-index: -2;
+			width: 100px;
+			height: 100px;
+		}
 	}
 	.img {
 		position: absolute;
@@ -83,11 +89,6 @@
 		width: 60%;
 		border-radius: 8px;
 		border: solid 2px #780000;
-	}
-	.Loading {
-		position: absolute;
-		margin: 15%;
-		z-index: -2;
 	}
 }
 

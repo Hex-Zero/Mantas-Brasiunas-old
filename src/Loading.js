@@ -1,7 +1,7 @@
 import React from 'react'
 const Loading = React.memo(() => {
 	return (
-		<div className='loadingSign loading'>
+		<div className='loadingSign'>
 			<div className='back' />
 			<div className='rotating'>
 				<div className='layer-1'>
