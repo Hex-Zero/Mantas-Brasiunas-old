@@ -37,7 +37,7 @@ const Projects = () => {
 	return (
 		<div className='projects'>
 			<h1 className='projectTitle'>
-				My Projects <p>click the project below for more info</p>
+				My Projects <p>click a project below for more info</p>
 			</h1>
 			<div className='fbox'>
 				{cardInfo.map(({ classDummy, url, title, content, git, web }) => (
