@@ -1,26 +1,28 @@
+.fbox {
+	margin: 0 auto;
+	display: flex;
+	width: 100%;
+	flex-wrap: wrap;
+	justify-content: center;
+	max-width: 1000px;
+}
 .projects {
 	margin-left: 7%;
 	margin-right: 7%;
 	cursor: default;
 	.About {
-		margin: 0 5%;
+		margin: 0 4%;
 		margin-top: 40px;
 		text-align: center;
-		max-width: 1080px;
 		border: solid 4px #f86e00;
 		border-radius: 4px;
 		padding: 5px 10px;
 		color: #984401;
 		box-shadow: 2px 2px #555;
 		font-size: 14px;
-	}
-	.fbox {
-		margin: 0 auto;
-		display: flex;
-		width: 100%;
-		flex-wrap: wrap;
-		justify-content: center;
-		max-width: 1000px;
+		@media only screen and (max-width: 600px) {
+			margin: 10px 8%;
+		}
 	}
 	.projectTitle {
 		left: 0;

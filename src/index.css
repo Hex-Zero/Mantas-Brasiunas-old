@@ -266,27 +266,7 @@ code {
   }
 }
 
-.projects {
-  margin-left: 7%;
-  margin-right: 7%;
-  cursor: default;
-}
-
-.projects .About {
-  margin: 0 5%;
-  margin-top: 40px;
-  text-align: center;
-  max-width: 1080px;
-  border: solid 4px #f86e00;
-  border-radius: 4px;
-  padding: 5px 10px;
-  color: #984401;
-  -webkit-box-shadow: 2px 2px #555;
-          box-shadow: 2px 2px #555;
-  font-size: 14px;
-}
-
-.projects .fbox {
+.fbox {
   margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -298,6 +278,31 @@ code {
       -ms-flex-pack: center;
           justify-content: center;
   max-width: 1000px;
+}
+
+.projects {
+  margin-left: 7%;
+  margin-right: 7%;
+  cursor: default;
+}
+
+.projects .About {
+  margin: 0 4%;
+  margin-top: 40px;
+  text-align: center;
+  border: solid 4px #f86e00;
+  border-radius: 4px;
+  padding: 5px 10px;
+  color: #984401;
+  -webkit-box-shadow: 2px 2px #555;
+          box-shadow: 2px 2px #555;
+  font-size: 14px;
+}
+
+@media only screen and (max-width: 600px) {
+  .projects .About {
+    margin: 10px 8%;
+  }
 }
 
 .projects .projectTitle {
