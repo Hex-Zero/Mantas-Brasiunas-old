@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import { FaPhone, FaCopy, FaMailBulk } from 'react-icons/fa'
 
 import SocialMedia from './SocialMedia'
@@ -11,16 +11,11 @@ const Contact = () => {
 		copyText.select()
 		document.execCommand('copy')
 		setAlertMessage(`${x} Copyed`)
+		setAlertClass('')
+		setTimeout(() => {
+			setAlertClass('showAlert')
+		}, 1)
 	}
-	useEffect(
-		() => {
-			setAlertClass('')
-			setTimeout(() => {
-				setAlertClass('showAlert')
-			}, 10)
-		},
-		[ alertMessage ]
-	)
 	return (
 		<React.Fragment>
 			<div className={`${alertClass} copyAlert`}>{alertMessage}</div>

@@ -3,6 +3,7 @@ import { ModalContext } from '../context/ModalContext'
 import Modal from './Modal'
 import Loading from '../Loading'
 import face from '../assets/face.jpg'
+import ContactReminder from './ContactReminder'
 const Burger = () => {
 	const { setVisible } = React.useContext(ModalContext)
 	return (
@@ -21,6 +22,7 @@ const Burger = () => {
 						<div className='burger-line' />
 					</div>
 				</div>
+				<ContactReminder />
 			</div>
 		</React.Fragment>
 	)

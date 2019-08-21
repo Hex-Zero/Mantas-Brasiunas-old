@@ -7,7 +7,7 @@ const Projects = () => {
 		{
 			url: 0,
 			title: 'Vita Smile Photograpy',
-			content: 'Landing page for a local family run photograpy bussiness',
+			content: 'Landing page for a local family run photograpy business',
 			git: 'https://github.com/Hex-Zero/VitaSmilePhotography',
 			web: 'https://vita-smile-photography.uk/'
 		},
