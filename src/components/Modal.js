@@ -12,8 +12,8 @@ const Modal = () => {
 				setModalShow('modalIn')
 				setCoverAnim('modalCoverUp')
 			} else if (visible === 'notShow') {
-				setModalShow('modalOut')
-				setCoverAnim('modalCoverDown')
+				setModalShow('')
+				setCoverAnim('')
 			}
 		},
 		[ visible ]

@@ -7,17 +7,17 @@
 		background: #f5f5f5a3;
 		opacity: 0;
 		z-index: 2;
-		visibility: hidden;
+		pointer-events: none;
+		transition: 750ms ease;
 	}
 	.modalCoverUp {
-		animation: coverUp 750ms forwards;
-	}
-	.modalCoverDown {
-		animation: coverDown 750ms forwards;
+		opacity: 1;
+		pointer-events: auto;
 	}
 	.modalInside {
 		visibility: 'visible';
 		top: -300px;
+		transition: 800ms ease;
 		position: fixed;
 		width: 300px;
 		height: 260px;
@@ -29,16 +29,12 @@
 		text-align: center;
 		border: solid 3px #f86e00;
 		border-radius: 4px;
-
+		transition: 750 ease;
 		z-index: 3;
 	}
 	.modalIn {
-		animation: ModalIn 750ms linear forwards;
+		transform: translateY(150%);
 	}
-	.modalOut {
-		animation: ModalOut 750ms linear forwards;
-	}
-
 	.close {
 		position: absolute;
 		right: 3px;
@@ -50,59 +46,10 @@
 		cursor: pointer;
 		-webkit-tap-highlight-color: transparent;
 		-webkit-touch-callout: none;
-		-webkit-user-select: none;
-		-khtml-user-select: none;
-		-moz-user-select: none;
-		-ms-user-select: none;
 		user-select: none;
 		&:hover {
 			color: gray;
 			border: solid 2px gray;
 		}
-	}
-}
-
-@keyframes ModalIn {
-	0% {
-		transform: translateY(0%);
-	}
-	100% {
-		transform: translateY(150%);
-	}
-}
-@keyframes ModalOut {
-	0% {
-		transform: translateY(150%);
-	}
-	100% {
-		transform: translateY(0%);
-	}
-}
-
-@keyframes coverUp {
-	0% {
-		visibility: hidden;
-		opacity: 0;
-	}
-	5% {
-		visibility: visible;
-	}
-	100% {
-		visibility: visible;
-		opacity: 1;
-	}
-}
-
-@keyframes coverDown {
-	0% {
-		visibility: visible;
-		opacity: 1;
-	}
-	95% {
-		visibility: visible;
-	}
-	100% {
-		opacity: 0;
-		visibility: hidden;
 	}
 }

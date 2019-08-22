@@ -4,11 +4,11 @@
 }
 
 *::-moz-selection {
-  background: #ffd0d0;
+  background: transparent;
 }
 
 *::selection {
-  background: #ffd0d0;
+  background: transparent;
 }
 
 body {
@@ -22,17 +22,8 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 
-.coverBackground {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  left: 0;
-  top: 0;
-  background: #f5f5f500;
-  z-index: -9;
-}
-
 .background {
+  pointer-events: none;
   position: fixed;
   width: 100%;
   height: 100%;
@@ -318,6 +309,10 @@ code {
   text-shadow: 1px 1px gray;
   -webkit-box-shadow: 2px 2px #555;
           box-shadow: 2px 2px #555;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 .projects .projectTitle:hover {
@@ -333,8 +328,24 @@ code {
   font-weight: 500;
 }
 
+.projects .about-title::-moz-selection {
+  background: rgba(253, 169, 169, 0.596);
+}
+
+.projects .about-title::selection {
+  background: rgba(253, 169, 169, 0.596);
+}
+
 .projects .about-content {
   text-align: left;
+}
+
+.projects .about-content::-moz-selection {
+  background: rgba(253, 169, 169, 0.596);
+}
+
+.projects .about-content::selection {
+  background: rgba(253, 169, 169, 0.596);
 }
 
 .videoCards {
@@ -497,6 +508,8 @@ code {
   background: linear-gradient(120deg, rgba(255, 0, 223, 0.18) 0%, rgba(255, 124, 0, 0.18) 48%, rgba(255, 0, 223, 0.17) 100%);
   -webkit-transform: translateX(100%);
           transform: translateX(100%);
+  -webkit-transition: 1s ease;
+  transition: 1s ease;
 }
 
 .projectSlides .bottom-Line {
@@ -513,6 +526,10 @@ code {
   color: white;
   -webkit-animation: slideGlow 1s ease-in-out infinite alternate;
           animation: slideGlow 1s ease-in-out infinite alternate;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 .projectSlides .tagWrapper {
@@ -554,49 +571,13 @@ code {
 }
 
 .slide-in {
-  -webkit-animation: slideIn 1s forwards linear;
-          animation: slideIn 1s forwards linear;
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
 }
 
 .slide-out {
-  -webkit-animation: slideOut 1s forwards linear;
-          animation: slideOut 1s forwards linear;
-}
-
-@-webkit-keyframes slideIn {
-  100% {
-    -webkit-transform: translateX(0%);
-            transform: translateX(0%);
-  }
-}
-
-@keyframes slideIn {
-  100% {
-    -webkit-transform: translateX(0%);
-            transform: translateX(0%);
-  }
-}
-
-@-webkit-keyframes slideOut {
-  0% {
-    -webkit-transform: translateX(0%);
-            transform: translateX(0%);
-  }
-  100% {
-    -webkit-transform: translateX(200%);
-            transform: translateX(200%);
-  }
-}
-
-@keyframes slideOut {
-  0% {
-    -webkit-transform: translateX(0%);
-            transform: translateX(0%);
-  }
-  100% {
-    -webkit-transform: translateX(200%);
-            transform: translateX(200%);
-  }
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
 }
 
 @-webkit-keyframes slideGlow {
@@ -737,22 +718,21 @@ code {
   background: #f5f5f5a3;
   opacity: 0;
   z-index: 2;
-  visibility: hidden;
+  pointer-events: none;
+  -webkit-transition: 750ms ease;
+  transition: 750ms ease;
 }
 
 .modal .modalCoverUp {
-  -webkit-animation: coverUp 750ms forwards;
-          animation: coverUp 750ms forwards;
-}
-
-.modal .modalCoverDown {
-  -webkit-animation: coverDown 750ms forwards;
-          animation: coverDown 750ms forwards;
+  opacity: 1;
+  pointer-events: auto;
 }
 
 .modal .modalInside {
   visibility: 'visible';
   top: -300px;
+  -webkit-transition: 800ms ease;
+  transition: 800ms ease;
   position: fixed;
   width: 300px;
   height: 260px;
@@ -764,17 +744,14 @@ code {
   text-align: center;
   border: solid 3px #f86e00;
   border-radius: 4px;
+  -webkit-transition: 750 ease;
+  transition: 750 ease;
   z-index: 3;
 }
 
 .modal .modalIn {
-  -webkit-animation: ModalIn 750ms linear forwards;
-          animation: ModalIn 750ms linear forwards;
-}
-
-.modal .modalOut {
-  -webkit-animation: ModalOut 750ms linear forwards;
-          animation: ModalOut 750ms linear forwards;
+  -webkit-transform: translateY(150%);
+          transform: translateY(150%);
 }
 
 .modal .close {
@@ -789,114 +766,14 @@ code {
   -webkit-tap-highlight-color: transparent;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 .modal .close:hover {
   color: gray;
   border: solid 2px gray;
-}
-
-@-webkit-keyframes ModalIn {
-  0% {
-    -webkit-transform: translateY(0%);
-            transform: translateY(0%);
-  }
-  100% {
-    -webkit-transform: translateY(150%);
-            transform: translateY(150%);
-  }
-}
-
-@keyframes ModalIn {
-  0% {
-    -webkit-transform: translateY(0%);
-            transform: translateY(0%);
-  }
-  100% {
-    -webkit-transform: translateY(150%);
-            transform: translateY(150%);
-  }
-}
-
-@-webkit-keyframes ModalOut {
-  0% {
-    -webkit-transform: translateY(150%);
-            transform: translateY(150%);
-  }
-  100% {
-    -webkit-transform: translateY(0%);
-            transform: translateY(0%);
-  }
-}
-
-@keyframes ModalOut {
-  0% {
-    -webkit-transform: translateY(150%);
-            transform: translateY(150%);
-  }
-  100% {
-    -webkit-transform: translateY(0%);
-            transform: translateY(0%);
-  }
-}
-
-@-webkit-keyframes coverUp {
-  0% {
-    visibility: hidden;
-    opacity: 0;
-  }
-  5% {
-    visibility: visible;
-  }
-  100% {
-    visibility: visible;
-    opacity: 1;
-  }
-}
-
-@keyframes coverUp {
-  0% {
-    visibility: hidden;
-    opacity: 0;
-  }
-  5% {
-    visibility: visible;
-  }
-  100% {
-    visibility: visible;
-    opacity: 1;
-  }
-}
-
-@-webkit-keyframes coverDown {
-  0% {
-    visibility: visible;
-    opacity: 1;
-  }
-  95% {
-    visibility: visible;
-  }
-  100% {
-    opacity: 0;
-    visibility: hidden;
-  }
-}
-
-@keyframes coverDown {
-  0% {
-    visibility: visible;
-    opacity: 1;
-  }
-  95% {
-    visibility: visible;
-  }
-  100% {
-    opacity: 0;
-    visibility: hidden;
-  }
 }
 
 .copyAlert {
@@ -927,14 +804,10 @@ code {
 .contactTitle {
   margin-top: 15px;
   cursor: default;
-}
-
-.contactTitle::-moz-selection {
-  background: #ffb7b700;
-}
-
-.contactTitle::selection {
-  background: #ffb7b700;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 .contactNode {

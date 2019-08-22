@@ -23,9 +23,7 @@
 .contactTitle {
 	margin-top: 15px;
 	cursor: default;
-	&::selection {
-		background: #ffb7b700;
-	}
+	user-select: none;
 }
 .contactNode {
 	display: block;

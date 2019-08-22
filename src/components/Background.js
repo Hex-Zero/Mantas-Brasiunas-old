@@ -50,7 +50,6 @@ const Background = () => {
 				))}
 				<img src={reach} alt='' />
 			</div>
-			<div className='coverBackground' />
 		</React.Fragment>
 	)
 }
