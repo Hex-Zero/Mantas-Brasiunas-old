@@ -1,0 +1,60 @@
+.fbox {
+	margin: 0 auto;
+	display: flex;
+	width: 100%;
+	flex-wrap: wrap;
+	justify-content: center;
+	max-width: 1000px;
+}
+.projects {
+	margin-left: 7%;
+	margin-right: 7%;
+	cursor: default;
+	.About {
+		margin: 20px 4%;
+		text-align: center;
+		border: solid 4px #f86e00;
+		border-radius: 4px;
+		padding: 5px 10px;
+		color: #984401;
+		box-shadow: 2px 2px #555;
+		font-size: 14px;
+		@media only screen and (max-width: 600px) {
+			margin: 10px 8%;
+		}
+	}
+	.projectTitle {
+		left: 0;
+		right: 0;
+		margin: 0 auto;
+		margin-top: 10px;
+		text-align: center;
+		width: 190px;
+		border: solid 4px #f86e00;
+		border-radius: 4px;
+		padding: 5px 10px 7px 10px;
+		color: #f86e00;
+		text-shadow: 1px 1px gray;
+		box-shadow: 2px 2px #555;
+		user-select: none;
+		&:hover {
+			background-color: whitesmoke;
+		}
+		p {
+			font-size: 15px;
+		}
+	}
+	.about-title {
+		font-size: 18px;
+		font-weight: 500;
+		&::selection {
+			background: rgba(253, 169, 169, 0.596);
+		}
+	}
+	.about-content {
+		text-align: left;
+		&::selection {
+			background: rgba(253, 169, 169, 0.596);
+		}
+	}
+}

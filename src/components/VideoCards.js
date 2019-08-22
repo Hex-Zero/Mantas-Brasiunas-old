@@ -1,74 +1,39 @@
 import React, { useState } from 'react'
-import styled, { keyframes } from 'styled-components'
 import Loading from '../Loading'
-import Slide from '../components/Slide'
-const VideoCards = ({ url, title, content, git, web }) => {
-	const [ state, setstate ] = useState('')
-	const handleSlide = (value) => {
-		setstate(value)
-	}
-
+import { FaGithub, FaGlobe } from 'react-icons/fa'
+import ravenouse from '../assets/ravenouse.jpg'
+import first from '../assets/first.gif'
+import vita from '../assets/vita.gif'
+import budget from '../assets/budget.jpg'
+const VideoCards = React.memo(({ url, title, content, git, web }) => {
+	const [ imageUrl ] = useState([ vita, ravenouse, budget, first ])
+	const [ slide, setSlide ] = useState('')
 	return (
-		<Stlyed>
-			<Video
+		<div className={`videoCards`}>
+			<div
 				className='card'
-				url={url}
-				onMouseEnter={() => handleSlide('slidein')}
-				onMouseLeave={() => handleSlide('slideout')}>
+				onMouseEnter={() => setSlide('slide-in')}
+				onMouseLeave={() => setSlide('slide-out')}>
+				<img className='projectImage' src={imageUrl[url]} alt={title} />
 				<Loading />
-				<div className={state + ' slide'}>
-					<Slide git={git} web={web} title={title} content={content} />
+				<div className={`${slide} projectSlides`}>
+					<h1 className='title'>{title}</h1>
+					<h2 className='content'>{content}</h2>
+					<div className='bottom-Line'>
+						<div className='tagWrapper'>
+							<a className='web tags' href={web} target='__blank' alt='website link'>
+								<FaGlobe />
+								<p> Site</p>
+							</a>
+							<a className='git tags' href={git} target='__blank' alt='github link'>
+								<FaGithub />
+								<p> Code</p>
+							</a>
+						</div>
+					</div>
 				</div>
-			</Video>
-		</Stlyed>
+			</div>
+		</div>
 	)
-}
-const slidein = keyframes` 100% { transform: translateX(0%); }
-`
-const slideout = keyframes`
-0% { transform: translateX(0%);
-100% { transform: translateX(200%); };
-`
-const Video = styled.div`
-	width: 100%;
-	height: 100%;
-	border-radius: 5px;
-	background-image: url(${(props) => props.url});
-	background-repeat: no-repeat;
-	background-size: 100% 100%;
-	z-index: 1;
-`
-const Stlyed = styled.div`
-	.center {
-		position: absolute;
-		margin: 90px 194px;
-	}
-	.card {
-		margin-right: 0;
-		overflow: hidden;
-		border-radius: 5px;
-		box-shadow: 3px 5px #555;
-	}
-	.slide {
-		transform: translateX(100%);
-		height: 100%;
-	}
-	.slidein {
-		animation: ${slidein} 1s forwards linear;
-	}
-	.slideout {
-		animation: ${slideout} 1s forwards linear;
-	}
-
-	@media only screen and (max-width: 600px) {
-		.links {
-			bottom: 5px;
-			right: 180px;
-		}
-		.center {
-			margin: 64px 133px;
-		}
-	}
-`
-
+})
 export default VideoCards

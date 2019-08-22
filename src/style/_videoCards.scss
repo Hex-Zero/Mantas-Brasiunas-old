@@ -1,0 +1,41 @@
+.videoCards {
+	margin: 10px;
+	width: 450px;
+	height: 250px;
+	.projectImage {
+		position: absolute;
+		width: 450px;
+		height: 250px;
+	}
+	.center {
+		position: absolute;
+		margin: 90px 194px;
+	}
+	.card {
+		width: 100%;
+		height: 100%;
+		border: solid 2px gray;
+		border-radius: 6px;
+		margin-right: 0;
+		overflow: hidden;
+		box-shadow: 3px 5px #555;
+		&:hover {
+			border: solid 2px #ff6a00;
+		}
+	}
+	@media only screen and (max-width: 600px) {
+		width: 350px;
+		height: 190px;
+		.projectImage {
+			width: 350px;
+			height: 190px;
+		}
+		.links {
+			bottom: 5px;
+			right: 180px;
+		}
+		.center {
+			margin: 64px 133px;
+		}
+	}
+}
