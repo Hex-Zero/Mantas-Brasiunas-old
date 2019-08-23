@@ -19,16 +19,11 @@ const Jokes = () => {
 					const jokedata = JSON.parse(y)
 					jokedata.type === 'single'
 						? setjoketext(jokedata.joke)
-						: setjoketext(
-								<pre>
-									{jokedata.setup}
-									{jokedata.delivery}
-								</pre>
-							)
+						: setjoketext(`${jokedata.setup} \n${jokedata.delivery}`)
 				}
 			})
 		},
-		[ url, next ]
+		[ url, next, category ]
 	)
 	return (
 		<React.Fragment>
