@@ -1,0 +1,47 @@
+$btn-color: rgb(255, 123, 0);
+
+.btn {
+	background: $btn-color;
+	color: #fff;
+	margin-left: 5px;
+	border: none;
+	position: relative;
+	height: 23px;
+	font-size: 1em;
+	padding: 0 0.5em;
+	cursor: pointer;
+	transition: 800ms ease all;
+	outline: none;
+	border-radius: 2px;
+	text-decoration: none !important;
+
+	&::selection {
+		background-color: transparent;
+	}
+	&:hover {
+		background: #fff;
+		color: $btn-color;
+	}
+	&:before,
+	&:after {
+		content: '';
+		position: absolute;
+		top: 0;
+		right: 0;
+		height: 2px;
+		width: 0;
+		background: $btn-color;
+		transition: 400ms ease all;
+	}
+	&:after {
+		right: inherit;
+		top: inherit;
+		left: 0;
+		bottom: 0;
+	}
+	&:hover:before,
+	&:hover:after {
+		width: 50%;
+		transition: 800ms ease all;
+	}
+}

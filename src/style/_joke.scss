@@ -1,0 +1,16 @@
+.category-selector {
+	select {
+		background-color: antiquewhite;
+		border: none;
+		outline: none;
+		color: orangered;
+		option {
+			background-color: antiquewhite;
+
+			outline: none;
+			&:hover {
+				background-color: antiquewhite;
+			}
+		}
+	}
+}

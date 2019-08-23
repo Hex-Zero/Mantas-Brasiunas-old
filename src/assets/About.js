@@ -1,4 +1,5 @@
 import React from 'react'
+import Jokes from '../components/Jokes'
 const About = () => {
 	return (
 		<div className='About'>
@@ -38,11 +39,9 @@ const About = () => {
 				astounding everyone. My approach to problems is not only to resolve them, but also
 				to optimize the result. Which to me is one of my greatest strengths
 			</p>
-			<p className='about-title'>Joke Of The Day</p>
-			<p className='about-content'>
-				Did you hear about the mathematician who's afraid of negative numbers? <br /> He'll
-				stop at nothing to avoid them.
-			</p>
+			<p className='about-title'>Funny Side</p>
+
+			<Jokes />
 		</div>
 	)
 }

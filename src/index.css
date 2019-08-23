@@ -1076,4 +1076,75 @@ code {
   -webkit-animation: showPointer 4s forwards;
           animation: showPointer 4s forwards;
 }
+
+.category-selector select {
+  background-color: antiquewhite;
+  border: none;
+  outline: none;
+  color: orangered;
+}
+
+.category-selector select option {
+  background-color: antiquewhite;
+  outline: none;
+}
+
+.category-selector select option:hover {
+  background-color: antiquewhite;
+}
+
+.btn {
+  background: #ff7b00;
+  color: #fff;
+  margin-left: 5px;
+  border: none;
+  position: relative;
+  height: 23px;
+  font-size: 1em;
+  padding: 0 0.5em;
+  cursor: pointer;
+  -webkit-transition: 800ms ease all;
+  transition: 800ms ease all;
+  outline: none;
+  border-radius: 2px;
+  text-decoration: none !important;
+}
+
+.btn::-moz-selection {
+  background-color: transparent;
+}
+
+.btn::selection {
+  background-color: transparent;
+}
+
+.btn:hover {
+  background: #fff;
+  color: #ff7b00;
+}
+
+.btn:before, .btn:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 2px;
+  width: 0;
+  background: #ff7b00;
+  -webkit-transition: 400ms ease all;
+  transition: 400ms ease all;
+}
+
+.btn:after {
+  right: inherit;
+  top: inherit;
+  left: 0;
+  bottom: 0;
+}
+
+.btn:hover:before, .btn:hover:after {
+  width: 50%;
+  -webkit-transition: 800ms ease all;
+  transition: 800ms ease all;
+}
 /*# sourceMappingURL=index.css.map */
