@@ -36,7 +36,7 @@ const Projects = () => {
 
 	return (
 		<div className='projects'>
-			<h1 className='projectTitle'>
+			<h1 className='projectTitle funGlow'>
 				My Projects <p>click a project below for more info</p>
 			</h1>
 			<div className='fbox'>

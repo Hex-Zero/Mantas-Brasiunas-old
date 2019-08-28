@@ -30,7 +30,11 @@ const Jokes = () => {
 			<div className='category-selector'>
 				Category:{' '}
 				<select onChange={(e) => setcategory(e.target.value)}>
-					{arrayCatergories.map((c) => <option value={c}>{c}</option>)}
+					{arrayCatergories.map((c) => (
+						<option key={c} value={c}>
+							{c}
+						</option>
+					))}
 				</select>
 			</div>
 			<div className='about-content'>{joketext}</div>

@@ -3,6 +3,7 @@ import Background from './components/Background'
 import Projects from './components/Projects'
 import Burger from './components/Burger'
 import { ModalProvider } from './context/ModalContext'
+import Logos from './assets/logos/Logos'
 
 function App() {
 	return (
@@ -10,6 +11,7 @@ function App() {
 			<Background />
 			<Projects />
 			<Burger />
+			<Logos />
 		</ModalProvider>
 	)
 }

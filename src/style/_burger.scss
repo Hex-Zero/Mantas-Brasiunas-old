@@ -35,7 +35,7 @@
 	}
 	.img {
 		position: absolute;
-		margin: 4% 4%;
+		margin: 5% 5%;
 		width: 90%;
 		height: 90%;
 		border-radius: 100%;
@@ -58,10 +58,10 @@
 		);
 	}
 	.statusLight {
-		margin: 2px 2px;
+		margin: 6%;
 		border-radius: 100%;
-		width: 80%;
-		height: 80%;
+		width: 85%;
+		height: 85%;
 		border: solid 1px #780000;
 		box-shadow: 1px 1px black inset;
 		background: radial-gradient(
@@ -74,9 +74,9 @@
 	.burger {
 		position: absolute;
 		top: 73%;
-		right: 5%;
-		width: 31%;
-		height: 31%;
+		right: 1%;
+		width: 34%;
+		height: 34%;
 		border-radius: 13%;
 		border: solid 1px #780000;
 		background: linear-gradient(
