@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import {
   FaFacebookSquare,
+  FaGithubSquare,
   FaInstagram,
   FaLinkedin,
   FaTwitter
@@ -10,14 +11,22 @@ const SocialMedia = () => {
     <FaFacebookSquare />,
     <FaInstagram />,
     <FaTwitter />,
-    <FaLinkedin />
+    <FaLinkedin />,
+    <FaGithubSquare />
   ]);
-  const [Id] = useState(["Facebook", "Instagram", "Twitter", "Linkedin"]);
+  const [Id] = useState([
+    "Facebook",
+    "Instagram",
+    "Twitter",
+    "Linkedin",
+    "GitHub"
+  ]);
   const [Links] = useState([
     "https://www.facebook.com/HexZer0",
     "https://www.instagram.com/hexzer0/",
     "https://twitter.com/Hex_Zero_",
-    "https://www.linkedin.com/in/mantas-brasiunas/"
+    "https://www.linkedin.com/in/mantas-brasiunas/",
+    "https://github.com/Hex-Zero"
   ]);
 
   return (

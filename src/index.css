@@ -987,12 +987,12 @@ code {
   color: #035a88;
 }
 
-.social #YouTube {
-  color: #ff1500;
+.social #GitHub {
+  color: black;
 }
 
-.social #YouTube:hover {
-  color: #bd1303;
+.social #GitHub:hover {
+  color: #474747;
 }
 
 .social .link {

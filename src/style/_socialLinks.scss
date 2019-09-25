@@ -1,36 +1,36 @@
 .social {
-	#Facebook {
-		color: #3b569c;
-		&:hover {
-			color: #2d4175;
-		}
-	}
-	#Instagram svg * {
-		fill: url(#instagramSvg);
-	}
-	#Instagram:hover svg * {
-		fill: url(#instagramSvgHover);
-	}
-	#Twitter {
-		color: #1ea1f2;
-		&:hover {
-			color: #1575b1;
-		}
-	}
-	#Linkedin {
-		color: #0077b5;
-		&:hover {
-			color: #035a88;
-		}
-	}
-	#YouTube {
-		color: #ff1500;
-		&:hover {
-			color: #bd1303;
-		}
-	}
-	.link {
-		font-size: 36px;
-		position: relative;
-	}
+  #Facebook {
+    color: #3b569c;
+    &:hover {
+      color: #2d4175;
+    }
+  }
+  #Instagram svg * {
+    fill: url(#instagramSvg);
+  }
+  #Instagram:hover svg * {
+    fill: url(#instagramSvgHover);
+  }
+  #Twitter {
+    color: #1ea1f2;
+    &:hover {
+      color: #1575b1;
+    }
+  }
+  #Linkedin {
+    color: #0077b5;
+    &:hover {
+      color: #035a88;
+    }
+  }
+  #GitHub {
+    color: black;
+    &:hover {
+      color: rgb(71, 71, 71);
+    }
+  }
+  .link {
+    font-size: 36px;
+    position: relative;
+  }
 }
