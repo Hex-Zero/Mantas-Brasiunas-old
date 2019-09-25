@@ -1,111 +1,111 @@
 .copyAlert {
-	width: 150px;
-	font-weight: 600;
-	font-size: 20px;
-	position: fixed;
-	background-color: #f86e00;
-	color: white;
-	left: 0;
-	right: 0;
-	border: solid 3px white;
-	text-align: center;
-	margin: 45px auto;
-	border-radius: 5px;
-	padding: 5px 10px;
-	z-index: 4;
-	opacity: 0;
-	cursor: pointer;
-	pointer-events: none;
+  width: 150px;
+  font-weight: 600;
+  font-size: 20px;
+  position: fixed;
+  background-color: #f86e00;
+  color: white;
+  left: 0;
+  right: 0;
+  border: solid 3px white;
+  text-align: center;
+  margin: 45px auto;
+  border-radius: 5px;
+  padding: 5px 10px;
+  z-index: 4;
+  opacity: 0;
+  cursor: pointer;
+  pointer-events: none;
 }
 .showAlert {
-	animation: fade 3s forwards cubic-bezier(0, .96, .31, 1);
+  animation: fade 3s forwards cubic-bezier(0, 0.96, 0.31, 1);
 }
 .contactTitle {
-	margin-top: 15px;
-	cursor: default;
-	user-select: none;
+  margin-top: 15px;
+  cursor: default;
+  user-select: none;
 }
 .contactNode {
-	display: block;
-	position: relative;
-	margin: 3px 10px;
-	color: white;
-	background: #f86e00;
-	border: solid 3px #f86e00;
-	padding: 6px 10px;
-	border-radius: 6px;
-	cursor: pointer;
-	&:hover {
-		background: #b35306;
-	}
-	.cover {
-		display: flex;
-		font-weight: 600;
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		align-items: center;
-		border-radius: 2px;
-		background-color: #f86e00;
-		&:hover {
-			background: #b35306;
-		}
-		p {
-			margin-left: 7px;
-		}
-	}
-	.icons {
-		position: absolute;
-		right: 5px;
-		cursor: pointer;
-		z-index: 3;
-	}
-	.input {
-		font-weight: 700;
-		color: white;
-		background: #00000000;
-		border: none;
-		cursor: pointer;
-
-		user-select: none;
-		&:focus {
-			outline: none;
-		}
-		&::selection {
-			background: #ffb7b700;
-		}
-	}
-	.contactLink {
-		color: white;
-		position: absolute;
-		right: 20px;
-		&:hover {
-			right: 21px;
-			top: 1px;
-			color: #fbc31b;
-		}
-	}
-	.copy {
-		&:hover {
-			position: absolute;
-			color: #fbc31b;
-			right: 1px;
-			top: 1px;
-		}
-	}
+  font-size: 0.8rem;
+  display: block;
+  position: relative;
+  margin: 3px 10px;
+  color: white;
+  background: #f86e00;
+  border: solid 3px #f86e00;
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  &:hover {
+    background: #b35306;
+  }
+  .cover {
+    display: flex;
+    font-weight: 600;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    border-radius: 2px;
+    background-color: #f86e00;
+    &:hover {
+      background: #b35306;
+    }
+    p {
+      margin-left: 7px;
+    }
+  }
+  .icons {
+    position: absolute;
+    right: 5px;
+    cursor: pointer;
+    z-index: 3;
+  }
+  .input {
+    font-weight: 700;
+    color: white;
+    background: #00000000;
+    border: none;
+    cursor: pointer;
+    user-select: none;
+    &:focus {
+      outline: none;
+    }
+    &::selection {
+      background: #ffb7b700;
+    }
+  }
+  .contactLink {
+    color: white;
+    position: absolute;
+    right: 20px;
+    &:hover {
+      right: 21px;
+      top: 1px;
+      color: #fbc31b;
+    }
+  }
+  .copy {
+    &:hover {
+      position: absolute;
+      color: #fbc31b;
+      right: 1px;
+      top: 1px;
+    }
+  }
 }
 
 @keyframes fade {
-	0% {
-		opacity: 0;
-	}
-	50% {
-		opacity: 1;
-	}
-	100% {
-		opacity: 0;
-		visibility: hidden;
-	}
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
 }

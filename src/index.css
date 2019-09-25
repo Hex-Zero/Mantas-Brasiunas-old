@@ -14,7 +14,7 @@
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: aliceblue;
@@ -755,7 +755,7 @@ code {
 }
 
 .modal .modalInside {
-  visibility: 'visible';
+  visibility: "visible";
   top: -300px;
   -webkit-transition: 800ms ease;
   transition: 800ms ease;
@@ -784,6 +784,7 @@ code {
   position: absolute;
   right: 3px;
   top: 3px;
+  font-size: 1.3rem;
   color: #f86e00;
   border: solid 2px #f86e00;
   padding: 2px;
@@ -837,6 +838,7 @@ code {
 }
 
 .contactNode {
+  font-size: 0.8rem;
   display: block;
   position: relative;
   margin: 3px 10px;
@@ -1174,108 +1176,72 @@ code {
   transition: 800ms ease all;
 }
 
-.react-logo {
-  position: fixed;
-  bottom: 30px;
-  right: 20px;
-  width: 85px;
-  -webkit-animation: reactRotate 3s linear infinite;
-          animation: reactRotate 3s linear infinite;
-}
-
 .main-cubediv {
+  margin: 22px 30px;
+  -webkit-perspective: 70px;
+          perspective: 70px;
   position: fixed;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  bottom: 20px;
-  left: 30px;
-  width: 40px;
-  height: 40px;
-  margin: 10px auto;
-  -webkit-perspective: 80px;
-          perspective: 80px;
+  bottom: 16px;
 }
 
 .main-cubediv .box-cubediv {
-  width: 40px;
+  width: 26px;
   -webkit-transform-style: preserve-3d;
           transform-style: preserve-3d;
-  -webkit-animation: boxRotate 15s linear infinite;
-          animation: boxRotate 15s linear infinite;
+  -webkit-animation: boxRotate 16s linear infinite;
+          animation: boxRotate 16s linear infinite;
 }
 
 .main-cubediv .box-cubediv div {
   position: absolute;
-  width: 40px;
-  height: 40px;
-  border: 2px solid #ffc936;
+  width: 26px;
+  height: 26px;
+  border: 2px solid orange;
   border-radius: 2px;
+  overflow: hidden;
 }
 
-.main-cubediv .box-cubediv .cube-logo {
-  width: 100%;
+.main-cubediv .box-cubediv .react-logo {
+  -webkit-animation: logoRotate 6s linear infinite;
+          animation: logoRotate 6s linear infinite;
 }
 
-.main-cubediv .box-cubediv .cube-type {
-  margin: 13%;
-  width: 75%;
+.main-cubediv .box-cubediv .graphQl-logo {
+  -webkit-animation: logoRotate 9s linear infinite;
+          animation: logoRotate 9s linear infinite;
+}
+
+.main-cubediv .box-cubediv .logo_scaledown {
+  margin: 2px;
+  width: 18px;
 }
 
 .main-cubediv .box-cubediv #Front {
-  -webkit-transform: translateZ(20px);
-          transform: translateZ(20px);
-  background: antiquewhite;
+  -webkit-transform: translateZ(13px);
+          transform: translateZ(13px);
+  background: white;
 }
 
 .main-cubediv .box-cubediv #Back {
-  -webkit-transform: rotateY(180deg) translateZ(20px);
-          transform: rotateY(180deg) translateZ(20px);
-  background: antiquewhite;
+  -webkit-transform: rotateY(180deg) translateZ(13px);
+          transform: rotateY(180deg) translateZ(13px);
+  background: white;
 }
 
 .main-cubediv .box-cubediv #Left {
-  -webkit-transform: rotateY(-90deg) translateX(-20px);
-          transform: rotateY(-90deg) translateX(-20px);
+  -webkit-transform: rotateY(-90deg) translateX(-13px);
+          transform: rotateY(-90deg) translateX(-13px);
   -webkit-transform-origin: left;
           transform-origin: left;
-  background: antiquewhite;
+  background: white;
 }
 
 .main-cubediv .box-cubediv #Right {
-  -webkit-transform: rotateY(90deg) translateX(20px);
-          transform: rotateY(90deg) translateX(20px);
+  -webkit-transform: rotateY(90deg) translateX(13px);
+          transform: rotateY(90deg) translateX(13px);
   -webkit-transform-origin: right;
           transform-origin: right;
-  background: antiquewhite;
-}
-
-.main-cubediv .box-cubediv #Top {
-  -webkit-transform: rotateX(-90deg) translateY(-20px);
-          transform: rotateX(-90deg) translateY(-20px);
-  -webkit-transform-origin: top;
-          transform-origin: top;
-  background: antiquewhite;
-}
-
-.main-cubediv .box-cubediv #Bottom {
-  -webkit-transform: rotateX(90deg) translateY(20px);
-          transform: rotateX(90deg) translateY(20px);
-  -webkit-transform-origin: bottom;
-          transform-origin: bottom;
-  background: antiquewhite;
-}
-
-@media only screen and (max-width: 600px) {
-  .main-cubediv {
-    position: relative;
-    bottom: 70px;
-  }
-  .react-logo {
-    position: relative;
-    top: -5px;
-    right: -150px;
-  }
+  background: white;
 }
 
 @-webkit-keyframes boxRotate {
@@ -1298,29 +1264,7 @@ code {
   }
 }
 
-@-webkit-keyframes typeSwitch {
-  from {
-    -webkit-transform: rotateY(0deg);
-            transform: rotateY(0deg);
-  }
-  to {
-    -webkit-transform: rotateY(360deg);
-            transform: rotateY(360deg);
-  }
-}
-
-@keyframes typeSwitch {
-  from {
-    -webkit-transform: rotateY(0deg);
-            transform: rotateY(0deg);
-  }
-  to {
-    -webkit-transform: rotateY(360deg);
-            transform: rotateY(360deg);
-  }
-}
-
-@-webkit-keyframes reactRotate {
+@-webkit-keyframes logoRotate {
   from {
     -webkit-transform: rotate(0deg);
             transform: rotate(0deg);
@@ -1331,7 +1275,7 @@ code {
   }
 }
 
-@keyframes reactRotate {
+@keyframes logoRotate {
   from {
     -webkit-transform: rotate(0deg);
             transform: rotate(0deg);
