@@ -14,14 +14,14 @@
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: aliceblue;
+  background: linear-gradient(74deg, rgba(246, 246, 246, 0.03) 0%, rgba(246, 246, 246, 0.03) 4%, rgba(152, 152, 152, 0.03) 4%, rgba(152, 152, 152, 0.03) 32%, rgba(123, 123, 123, 0.03) 32%, rgba(123, 123, 123, 0.03) 41%, rgba(189, 189, 189, 0.03) 41%, rgba(189, 189, 189, 0.03) 45%, rgba(151, 151, 151, 0.03) 45%, rgba(151, 151, 151, 0.03) 47%, rgba(61, 61, 61, 0.03) 47%, rgba(61, 61, 61, 0.03) 77%, rgba(34, 34, 34, 0.03) 77%, rgba(34, 34, 34, 0.03) 100%), linear-gradient(117deg, rgba(222, 222, 222, 0.03) 0%, rgba(222, 222, 222, 0.03) 7%, rgba(67, 67, 67, 0.03) 7%, rgba(67, 67, 67, 0.03) 18%, rgba(61, 61, 61, 0.03) 18%, rgba(61, 61, 61, 0.03) 26%, rgba(32, 32, 32, 0.03) 26%, rgba(32, 32, 32, 0.03) 52%, rgba(119, 119, 119, 0.03) 52%, rgba(119, 119, 119, 0.03) 60%, rgba(252, 252, 252, 0.03) 60%, rgba(252, 252, 252, 0.03) 68%, rgba(9, 9, 9, 0.03) 68%, rgba(9, 9, 9, 0.03) 100%), linear-gradient(313deg, rgba(193, 193, 193, 0.03) 0%, rgba(193, 193, 193, 0.03) 12%, rgba(184, 184, 184, 0.03) 12%, rgba(184, 184, 184, 0.03) 24%, rgba(194, 194, 194, 0.03) 24%, rgba(194, 194, 194, 0.03) 43%, rgba(128, 128, 128, 0.03) 43%, rgba(128, 128, 128, 0.03) 54%, rgba(87, 87, 87, 0.03) 54%, rgba(87, 87, 87, 0.03) 71%, rgba(169, 169, 169, 0.03) 71%, rgba(169, 169, 169, 0.03) 93%, rgba(83, 83, 83, 0.03) 93%, rgba(83, 83, 83, 0.03) 100%), linear-gradient(19deg, rgba(186, 186, 186, 0.03) 0%, rgba(186, 186, 186, 0.03) 9%, rgba(77, 77, 77, 0.03) 9%, rgba(77, 77, 77, 0.03) 19%, rgba(38, 38, 38, 0.03) 19%, rgba(38, 38, 38, 0.03) 27%, rgba(203, 203, 203, 0.03) 27%, rgba(203, 203, 203, 0.03) 39%, rgba(130, 130, 130, 0.03) 39%, rgba(130, 130, 130, 0.03) 43%, rgba(184, 184, 184, 0.03) 43%, rgba(184, 184, 184, 0.03) 81%, rgba(108, 108, 108, 0.03) 81%, rgba(108, 108, 108, 0.03) 100%), linear-gradient(90deg, rgba(107, 4, 14, 0.068), rgba(255, 136, 0, 0.158));
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 
 .background {
@@ -282,13 +282,13 @@ code {
 .projects .About {
   margin: 20px 4%;
   text-align: center;
-  border: solid 4px #f86e00;
   border-radius: 4px;
-  padding: 5px 10px;
-  color: #984401;
-  -webkit-box-shadow: 2px 2px #555;
-          box-shadow: 2px 2px #555;
+  padding: 40px;
+  color: #6e3506;
   font-size: 14px;
+  background-color: #fff;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.141);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.141);
 }
 
 @media only screen and (max-width: 600px) {
@@ -300,24 +300,20 @@ code {
 .projects .projectTitle {
   left: 0;
   right: 0;
-  margin: 0 auto;
+  margin: 15px auto;
   margin-top: 10px;
   text-align: center;
   width: 250px;
-  border: solid 1px #f86e00;
   border-radius: 4px;
   padding: 5px 10px 7px 10px;
-  color: goldenrod;
-  -webkit-box-shadow: 2px 2px #555;
-          box-shadow: 2px 2px #555;
+  color: #6e3506;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.141);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.141);
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
-}
-
-.projects .projectTitle:hover {
-  background-color: whitesmoke;
+  background-color: rgba(255, 255, 255, 0.911);
 }
 
 .projects .projectTitle p {
@@ -339,6 +335,7 @@ code {
 
 .projects .about-content {
   text-align: left;
+  margin: 20px;
 }
 
 .projects .about-content::-moz-selection {
@@ -1182,6 +1179,7 @@ code {
           perspective: 70px;
   position: fixed;
   bottom: 16px;
+  right: 0px;
 }
 
 .main-cubediv .box-cubediv {
